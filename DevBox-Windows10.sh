@@ -27,7 +27,7 @@ wget -O W10.vhd https://app.vagrantup.com/thuonghai2711/boxes/W2012DevBox/versio
 clear
 VBoxManage createvm --name W10 --ostype Windows10_64 --register --basefolder `pwd` 
 VBoxManage modifyvm W10 --ioapic on 
-VBoxManage modifyvm W10 --memory 12288 --vram 256 --cpus 8
+VBoxManage modifyvm W10 --memory 10240 --vram 256 --cpus 8
 VBoxManage modifyvm W10 --nic1 nat 
 VBoxManage modifyvm W10 --natpf1 "rdp,tcp,,33899,,3389"
 vboxmanage storagectl W10 --name "SATA Controller" --add sata --controller IntelAHCI --portcount 1 --bootable on
