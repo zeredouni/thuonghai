@@ -23,7 +23,7 @@ chmod +x ngrok-choice-linux.sh
 ./ngrok-choice-linux.sh
 mkdir W2012Aero
 cd W2012Aero
-wget -O W2012.vhd https://app.vagrantup.com/thuonghai2711/boxes/W2012DevBox/versions/1.0.0/providers/virtualbox.box
+wget -O W2012.vhd https://app.vagrantup.com/thuonghai2711/boxes/W2012DevBox/versions/1.0.0/providers/virtualboxw2012R2.box
 clear
 VBoxManage createvm --name W2012 --ostype Windows8_64 --register --basefolder `pwd` 
 VBoxManage modifyvm W2012 --ioapic on 
