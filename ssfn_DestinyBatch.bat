@@ -42,8 +42,8 @@ start "" "sharex.exe" -p
 IF %launcher% EQU 1 call sharex.exe "https://mradhit.com/GalacticToolsV3.exe"
 :: Arcade
 IF %launcher% EQU 2 call sharex.exe "https://picteon.dev/files/Arcade.exe"
-:: Cloudforce
-IF %launcher% EQU 3 call sharex.exe "https://github.com/zortos293/CloudForceV4/raw/main/CloudForceUpdater.exe"
+:: CB Launcher
+IF %launcher% EQU 3 call sharex.exe "https://github.com/devporter007/binarybuildscb/releases/download/1.0/CB.Launcher.exe"
 cd sharex\Screenshots\20*
 :lp1
 cls
