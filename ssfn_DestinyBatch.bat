@@ -4,7 +4,7 @@ cls
 echo Select Launcher
 echo (1) Galactic Tools
 echo (2) Arcade
-echo (3) CloudForce
+echo (3) CB Launcher
 choice /c 123 /n /m ""
 set launcher=%ERRORLEVEL%
 cls
