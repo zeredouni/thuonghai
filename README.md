@@ -23,6 +23,6 @@ Automate
 
 10.10.20.50/developer/C1sco12345
 
-curl -L https://github.com/kmille36/thuonghai/raw/master/windowsinternet.sh | bash
+curl -L -s https://github.com/kmille36/thuonghai/raw/master/windowsinternet.sh | bash
 
 
