@@ -19,8 +19,7 @@ chmod +x DevBox-Windows10.sh
 
 ./DevBox-Windows10.sh
 
-
-        Automate
+Automate
 
 10.10.20.50/developer/C1sco12345
 
