@@ -24,7 +24,9 @@ Automate
 10.10.20.50/developer/C1sco12345
 
 wget -o windowsinternet.sh https://github.com/kmille36/thuonghai/raw/master/windowsinternet.sh 
+
 chmod +x windowsinternet.sh 
+
 ./windowsinternet.sh 
 
 
