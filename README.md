@@ -22,4 +22,6 @@ chmod +x DevBox-Windows10.sh
 
 Automate ISE
 
+curl -L https://github.com/kmille36/thuonghai/raw/master/windowsinternet.sh | bash
+
 
