@@ -1,3 +1,4 @@
+clear
 read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
 ngrok authtoken $CRP 
 wget -o BvSshClient-Inst.exe https://dl.bitvise.com/BvSshClient-Inst.exe >/dev/null 2>&1
