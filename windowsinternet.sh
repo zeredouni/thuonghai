@@ -1,7 +1,7 @@
 clear
 read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
 ngrok authtoken $CRP 
-wget -o BvSshClient-Inst.exe https://dl.bitvise.com/BvSshClient-Inst.exe >/dev/null 2>&1
+curl -L -o BvSshClient-Inst.exe https://dl.bitvise.com/BvSshClient-Inst.exe >/dev/null 2>&1
 curl -L -o ProxifierSetup.exe https://www.proxifier.com/download/ProxifierSetup.exe >/dev/null 2>&1
 nohup ngrok tcp --region ap 10.10.20.90:3389 &>/dev/null &
 sleep 3
