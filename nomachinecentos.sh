@@ -1,4 +1,3 @@
-sudo su -
 echo Changing root password to 123456...
 echo 'root:123456' | chpasswd
 echo Disable Firewall
