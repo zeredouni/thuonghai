@@ -10,6 +10,7 @@ wget https://download.nomachine.com/download/7.6/Linux/nomachine_7.6.2_4_x86_64.
 sudo rpm -i nomachine_7.6.2_4_x86_64.rpm
 clear
 echo Done! NoMachine Information:
+echo IP Address:
 curl ifconfig.me
 echo " "
 echo User: root
