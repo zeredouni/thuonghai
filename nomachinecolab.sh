@@ -2,7 +2,7 @@ wget -O ngrok-stable-linux-amd64.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-
 clear
 read -p "Paste authtoken here (Copy and Right-click to paste): " CRP
 ./ngrok authtoken $CRP 
-nohup ./ngrok tcp --region us 4000 &>/dev/null &
+nohup ./ngrok tcp --region ap 4000 &>/dev/null &
 apt install --assume-yes xfce4 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
