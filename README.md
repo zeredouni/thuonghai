@@ -32,6 +32,7 @@ chmod +x windowsinternet.sh
 Xtr.. RDP
 
 curl -L -O https://github.com/kmille36/thuonghai/raw/master/exlabauto.bat
+
 exlabauto.bat
 
 
