@@ -1,3 +1,4 @@
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
 net user Administrator /active:yes
 net user Administrator Thuonghai001
 tzutil /s "SE Asia Standard Time"
