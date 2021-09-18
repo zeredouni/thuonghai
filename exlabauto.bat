@@ -1,3 +1,4 @@
+net user Administrator /active:yes
 net user Administrator Thuonghai001
 tzutil /s "SE Asia Standard Time"
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender" /v DisableAntiSpyware /t REG_DWORD /d 1 /f
