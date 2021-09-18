@@ -8,8 +8,8 @@ certutil -urlcache -split -f https://raw.githubusercontent.com/leopkks/thuonghai
 certutil -urlcache -split -f https://raw.githubusercontent.com/leopkks/thuonghai/master/nircmd.exe
 curl -LJOk https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip
 7z x ngrok-stable-windows-amd64.zip
-ngrok authtoken 1YhyjW3lK2BEBeNul7lcR3QoS6C_22K9WY61ZdVnc2A27TSZf
-start ngrok tcp 3389
+ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
+start ngrok tcp --region ap 3389
 cd C:\Users\Admin\Desktop
 curl -LJOk https://raw.githubusercontent.com/leopkks/thuonghai/master/ChromeSetup.exe
 curl -LJOk https://raw.githubusercontent.com/kmille36/thuonghai/master/ToolExtend.exe
