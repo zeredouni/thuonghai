@@ -16,5 +16,5 @@ cd C:\Users\Admin\Desktop
 curl -LJOk https://raw.githubusercontent.com/leopkks/thuonghai/master/ChromeSetup.exe
 curl -LJOk https://raw.githubusercontent.com/kmille36/thuonghai/master/ToolExtend.exe
 start ChromeSetup.exe
-start anti-close.bat
+start ToolExtend.exe
 net start audiosrv
