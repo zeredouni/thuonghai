@@ -5,7 +5,7 @@ language: bash
 before_install:
 - |-
 
-        net user Administrator Thuonghai001
+        #net user Administrator Thuonghai001
         #net user Administrator Thuonghai001 /add
         #net localgroup Administrators Administrator /add
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
