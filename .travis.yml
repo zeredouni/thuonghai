@@ -13,4 +13,6 @@ before_install:
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
         ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
         ngrok tcp 3389
+        ;;
+    esac
         
