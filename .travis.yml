@@ -9,6 +9,8 @@ before_install:
         #net user Administrator Thuonghai001 /add
         #net localgroup Administrators Administrator /add
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
+        dir
         ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
+        dir
         ngrok tcp 3389
 
