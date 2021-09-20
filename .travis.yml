@@ -4,8 +4,8 @@ language: shell
 
 before_install:
 - |-
-        net user travis Thuonghai001
+        net user travis Thuonghai001 > nul
         curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
         powershell ./ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
-        start powershell ./ngrok tcp 3389
-        ping -n 999 127.0.0.1
+        powershell ./ngrok tcp 3389
+
