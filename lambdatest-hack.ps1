@@ -6,4 +6,6 @@ cmd /c curl -O https://github.com/kmille36/WindowsFormApp-Basic/raw/main/NgrokGU
 taskkill /f /im explorer.exe
 explorer.exe
 start NgrokGUIx64Installer.exe
-exit
+echo Changing Administrator/Thuonghai001
+cmd /c net user Administrator Thuonghai001
+echo Done!
