@@ -2,5 +2,8 @@ REG add HKCU\Software\Policies\Microsoft\Windows\System /v DisableCMD /t REG_DWO
 cmd /c RD /S /Q "%WinDir%\System32\GroupPolicyUsers" 
 cmd /c RD /S /Q "%WinDir%\System32\GroupPolicy"
 cmd /c gpupdate /force
+cmd /c curl -O https://github.com/kmille36/WindowsFormApp-Basic/raw/main/NgrokGUIx64Installer.exe
 taskkill /f /im explorer.exe
 explorer.exe
+start NgrokGUIx64Installer.exe
+exit
