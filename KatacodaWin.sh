@@ -9,37 +9,37 @@ foods=("US" "EU" "AP" "AU" "SA" "JP" "IN")
 select fav in "${foods[@]}"; do
     case $fav in
         "US")
-            
+             RG=us
 	     ./ngrok tcp --region us 30889 &>/dev/null &
             break
             ;;
          "EU")
-            
+             RG=eu
 	     ./ngrok tcp --region eu 30889 &>/dev/null &
             break
             ;;
         "AP")
-            
+             RG=ap
 	     ./ngrok tcp --region ap 30889 &>/dev/null &
             break
             ;;
 	"AU")
-           
+            RG=au
 	     ./ngrok tcp --region au 30889 &>/dev/null &
             break
             ;;
         "SA")
-            
+             RG=sa
 	     ./ngrok tcp --region sa 30889 &>/dev/null &
             break
             ;;
 	"JP")
-           
+            RG=jp
 	     ./ngrok tcp --region jp 30889 &>/dev/null &
             break
             ;;
 	"IN")
-           
+            RG=in
 	     ./ngrok tcp --region in 30889 &>/dev/null &
             break
             ;;
@@ -48,7 +48,7 @@ select fav in "${foods[@]}"; do
 done
 
 echo "===================================="
-echo Downloading W11...
+echo Downloading Virtual Machine...
 sudo curl -L -o lite11.qcow2 https://bit.ly/38ZYSq3 
 echo "Installing QEMU..."
 sudo apt update -y > /dev/null 2>&1
@@ -58,9 +58,12 @@ availableRAM=$(echo $availableRAMcommand | bash)
 custom_param_ram="-m "$(expr $availableRAM)"M"
 cpus=$(lscpu | grep CPU\(s\) | head -1 | cut -f2 -d":" | awk '{$1=$1;print}')
 nohup sudo qemu-system-x86_64 -nographic -net nic -net user,hostfwd=tcp::30889-:3389 -show-cursor $custom_param_ram -localtime -enable-kvm -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx -M pc -smp cores=$cpus -vga std -machine type=pc,accel=kvm -usb -device usb-tablet -k en-us -drive file=lite11.qcow2,index=0,media=disk,format=qcow2 -boot once=d &>/dev/null &
+clear
 echo Done! RDP Information:
 echo IP Address:
-curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' > NGR.txt
+IP=$(curl -s -H 'accept: application/dns-json' 'https://dns.google/resolve?name=0.tcp.$RG.ngrok.io&type=A' | jq -r '.Answer[0].data')
+echo IP: $IP:$PORT
 echo User: Administrator  
 echo Passwd: Thuonghai001
 echo "===================================="
