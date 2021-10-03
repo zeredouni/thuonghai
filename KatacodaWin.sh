@@ -4,7 +4,7 @@ chmod +x ng.sh
 ./ng.sh
 clear
 echo "======================="
-cho "======================="
+echo "======================="
 echo "choose ngrok region (for better connection)."
 echo "======================="
 echo "us - United States (Ohio)"
