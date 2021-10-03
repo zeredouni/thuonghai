@@ -26,7 +26,12 @@ wget https://download.nomachine.com/download/7.6/Linux/nomachine_7.6.2_4_amd64.d
 sudo dpkg -i nomachine_7.6.2_4_amd64.deb > /dev/null 2>&1
 echo Done! NoMachine Information:
 echo IP Address:
-curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' > NGR.txt
+cat NGR.txt | sed -e 's/.*://' > PORT.txt
+IP=$(curl -s -H 'accept: application/dns-json' 'https://dns.google/resolve?name=0.tcp.$RG.ngrok.io&type=A' | jq -r '.Answer[0].data')
+PORT=$(echo cat PORT.txt | bash)
+echo IP: $IP
+echo Port: $PORT
 echo User: root
 echo Passwd: 123456
 echo "===================================="
