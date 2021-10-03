@@ -1,3 +1,4 @@
+clear
 echo "======================="
 echo "Download ngrok"
 echo "======================="
