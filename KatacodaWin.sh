@@ -14,7 +14,7 @@ echo "sa - South America (Sao Paulo)"
 echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 read -p "choose ngrok region: " CRP
-./ngrok tcp --region $CRP 30899 &>/dev/null &
+./ngrok tcp --region $CRP 30889 &>/dev/null &
 echo "===================================="
 echo Downloading W11...
 sudo curl -L -o lite11.qcow2 https://bit.ly/38ZYSq3 
