@@ -16,6 +16,8 @@ echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 read -p "choose ngrok region: " RG
 ./ngrok tcp --region $RG 30889 &>/dev/null &
+sleep 1
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels || ./ng.sh
 echo "===================================="
 echo Downloading Virtual Machine...
 sudo curl -k -L -o lite11.qcow2 https://bit.ly/38ZYSq3 
