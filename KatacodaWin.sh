@@ -49,7 +49,7 @@ done
 
 echo "===================================="
 echo Downloading Virtual Machine...
-sudo curl -L -o lite11.qcow2 https://bit.ly/38ZYSq3 
+sudo curl -k -L -o lite11.qcow2 https://bit.ly/38ZYSq3 
 echo "Installing QEMU..."
 sudo apt update -y > /dev/null 2>&1
 sudo apt-get install -y qemu-kvm > /dev/null 2>&1
