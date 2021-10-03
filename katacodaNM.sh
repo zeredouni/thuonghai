@@ -19,6 +19,7 @@ echo "===================================="
 echo Changing root password to 123456...
 echo 'root:123456' | chpasswd
 echo "Installing XFCE4 Desktop Environment..."
+sudo apt update -y > /dev/null 2>&1
 sudo apt-get install -y firefox xfonts-base xfce4 xfce4-goodies xrdp > /dev/null 2>&1
 echo Installing NoMachine...
 wget https://download.nomachine.com/download/7.6/Linux/nomachine_7.6.2_4_amd64.deb > /dev/null 2>&1
