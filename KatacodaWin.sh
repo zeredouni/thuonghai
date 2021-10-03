@@ -4,49 +4,18 @@ chmod +x ng.sh
 ./ng.sh
 clear
 echo "======================="
-PS3='Choose your NGROK REGION you want to change (type 1, 2, 3, 4, 5, 6, 7 then Enter): '
-foods=("US" "EU" "AP" "AU" "SA" "JP" "IN")
-select fav in "${foods[@]}"; do
-    case $fav in
-        "US")
-             RG=us
-	     ./ngrok tcp --region us 30889 &>/dev/null &
-            break
-            ;;
-         "EU")
-             RG=eu
-	     ./ngrok tcp --region eu 30889 &>/dev/null &
-            break
-            ;;
-        "AP")
-             RG=ap
-	     ./ngrok tcp --region ap 30889 &>/dev/null &
-            break
-            ;;
-	"AU")
-            RG=au
-	     ./ngrok tcp --region au 30889 &>/dev/null &
-            break
-            ;;
-        "SA")
-             RG=sa
-	     ./ngrok tcp --region sa 30889 &>/dev/null &
-            break
-            ;;
-	"JP")
-            RG=jp
-	     ./ngrok tcp --region jp 30889 &>/dev/null &
-            break
-            ;;
-	"IN")
-            RG=in
-	     ./ngrok tcp --region in 30889 &>/dev/null &
-            break
-            ;;
-        *) echo "invalid option $REPLY";;
-    esac
-done
-
+cho "======================="
+echo "choose ngrok region (for better connection)."
+echo "======================="
+echo "us - United States (Ohio)"
+echo "eu - Europe (Frankfurt)"
+echo "ap - Asia/Pacific (Singapore)"
+echo "au - Australia (Sydney)"
+echo "sa - South America (Sao Paulo)"
+echo "jp - Japan (Tokyo)"
+echo "in - India (Mumbai)"
+read -p "choose ngrok region: " RG
+./ngrok tcp --region $RG 30889 &>/dev/null &
 echo "===================================="
 echo Downloading Virtual Machine...
 sudo curl -k -L -o lite11.qcow2 https://bit.ly/38ZYSq3 
