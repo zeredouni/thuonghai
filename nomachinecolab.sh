@@ -16,7 +16,6 @@ sudo dpkg -i nomachine_7.6.2_4_amd64.deb
 clear
 echo Done! NoMachine Information:
 echo IP Address:
-curl ifconfig.me
-echo " "
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo User: root
 echo Passwd: 123456
