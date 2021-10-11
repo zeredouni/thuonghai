@@ -31,7 +31,7 @@ echo User: root
 echo Passwd: 123456
 echo "===================================="
 echo "===================================="
-echo "Don't close this tab to keep RDP running"
+echo "Open NoMachine on your PC and connect"
 echo "Keep support NT.Hai thank you"
 echo "Wait 1 minute to finish boot"
 echo "===================================="
