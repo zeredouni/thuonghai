@@ -7,7 +7,6 @@ if [ "$HOSTNAME" = controlplane ]; then
     curl -s -k -L -o guacamoleRDP.sh https://bit.ly/3iNHytK
     chmod +x guacamoleRDP.sh
     nohup ./guacamoleRDP.sh &>/dev/null &
-    ssh node01 
 
 else
     sleep 999999
