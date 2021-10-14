@@ -27,7 +27,7 @@ rm -rf ngrok-stable-linux-amd64.zip
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels > /dev/null 2>&1 || bash -c "echo An Error With Your Tunnel, Pleasy Try Again... && sleep 2 && bash choice.sh"
 clear
 echo All done! Here your VM!
-IP Address:
+echo "IP Address:"
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 curl -L -s -o spinner.sh https://bit.ly/3AEOj7j > /dev/null 2>&1
 chmod +x spinner.sh
