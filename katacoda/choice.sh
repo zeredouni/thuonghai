@@ -32,7 +32,8 @@ echo "IP Address:"
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' > tunnel.txt
 cat tunnel.txt | sed 's/^.*:\([0-9]*\)$/\1/' > port.txt
 rg=$(echo cat RG.txt | bash)
-ip=$(curl -s -H 'accept: application/dns-json' 'https://dns.google/resolve?name=0.tcp.$rg.ngrok.io&type=A' | jq -r '.Answer[0].data')
+curl -s -H 'accept: application/dns-json' 'https://dns.google/resolve?name=0.tcp.$rg.ngrok.io&type=A' | jq -r '.Answer[0].data' > ip.txt
+ip=$(echo cat ip.txt | bash)
 port=$(echo cat port.txt | bash)
 echo $ip:$port
 echo "User: Administrator"
