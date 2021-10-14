@@ -22,6 +22,7 @@ read -p "choose your region: " CRP
 ./python3 tcp --region $CRP 3389 &>/dev/null &
 clear
 echo All done! Please click Open Desktop to access your VM!
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 curl -L -s -o spinner.sh https://bit.ly/3AEOj7j > /dev/null 2>&1
 chmod +x spinner.sh
 ./spinner.sh sleep 999999
