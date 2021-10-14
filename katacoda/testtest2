@@ -1,0 +1,8 @@
+
+clear
+echo Waiting for installation complete... 
+wget -O spinner.sh https://github.com/kmille36/thuonghai/raw/master/katacoda/spinner.sh > /dev/null 2>&1
+chmod +x spinner.sh
+while [ ! -f done.txt ]; do ./spinner.sh sleep 1; done; 
+echo "You're all set !!!"
+./spinner.sh sleep 999999
