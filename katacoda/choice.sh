@@ -25,7 +25,7 @@ nohup ./python3 tcp --region $CRP 3389 &>/dev/null &
 echo $CRP > RG.txt
 sleep 2
 rm -rf ngrok-stable-linux-amd64.zip
-curl --silent --show-error http://127.0.0.1:4040/api/tunnels > /dev/null 2>&1 || bash -c "echo An Error With Your Tunnel, Pleasy Try Again... && sleep 2 && bash choice.sh"
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels > /dev/null 2>&1 || bash -c "echo An Error With Your Tunnel, Please Check Token And Try Again... && sleep 2 && bash choice.sh"
 clear
 echo "All done! Here your VM! (Don't press Ctrl+C)"
 echo "IP Address:"
