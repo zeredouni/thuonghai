@@ -21,7 +21,7 @@ echo "sa - South America (Sao Paulo)"
 echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 read -p "choose your region: " CRP
-./python3 tcp --region $CRP 3389 &>/dev/null &
+nohup ./python3 tcp --region ap 3389 &>/dev/null &
 sleep 2
 rm -rf ngrok-stable-linux-amd64.zip
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels > /dev/null 2>&1 || bash -c "echo An Error With Your Tunnel, Pleasy Try Again... && sleep 2 && bash choice.sh"
