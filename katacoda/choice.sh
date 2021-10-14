@@ -28,7 +28,11 @@ curl --silent --show-error http://127.0.0.1:4040/api/tunnels > /dev/null 2>&1 ||
 clear
 echo "All done! Here your VM! (Don't press Ctrl+C)"
 echo "IP Address:"
-curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p' > tunnel.txt
+cat tunnel.txt | sed 's/^.*:\([0-9]*\)$/\1/' > port.txt
+ip=$(curl -s -H 'accept: application/dns-json' 'https://dns.google/resolve?name=0.tcp.$CRP.ngrok.io&type=A' | jq -r '.Answer[0].data')
+port=$(echo cat port.txt | bash)
+echo $ip:$port
 echo "User: Administrator"
 echo "Password: Thuonghai001"
 curl -L -s -o spinner.sh https://bit.ly/3AEOj7j > /dev/null 2>&1
