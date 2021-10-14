@@ -6,7 +6,7 @@ wget -O ngrok-stable-linux-amd64.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-
 unzip -o ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 mv ngrok python3
 clear
-echo Get Authtoken Here: https://bit.ly/3oXOnNj
+echo "Get Authtoken Here: https://bit.ly/3oXOnNj"
 read -p "Paste Your Authtoken: " CRP
 ./python3 authtoken $CRP 
 clear
