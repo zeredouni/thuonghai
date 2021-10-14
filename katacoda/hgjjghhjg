@@ -5,6 +5,9 @@ vtx=$(egrep -i '^flags.*(vmx|svm)' /proc/cpuinfo | wc -l)
 if [ $vtx = 0 ] ; then echo "[Error] Environment Checking Error!!! Please Reload Page!!!"&& shutdown now
 fi
 
+apt update
+apt install sudo curl wget git -y
+
 clear
 echo Cloning ...
 git clone https://github.com/novnc/noVNC.git > /dev/null 2>&1
