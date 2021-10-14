@@ -22,6 +22,7 @@ echo "in - India (Mumbai)"
 read -p "choose your region: " CRP
 ./python3 tcp --region $CRP 3389 &>/dev/null &
 sleep 2
+rm -rf ngrok-stable-linux-amd64.zip
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels > /dev/null 2>&1 || bash -c "echo An Error With Your Tunnel, Pleasy Try Again... && sleep 2 && bash main.sh"
 clear
 echo All done! Please click Open Desktop to access your VM!
