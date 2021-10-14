@@ -5,16 +5,12 @@ vtx=$(egrep -i '^flags.*(vmx|svm)' /proc/cpuinfo | wc -l)
 if [ $vtx = 0 ] ; then echo "[Error] Environment Checking Error!!! Please Reload Page!!!"&& shutdown now
 fi
 
-apt update
-apt install sudo curl wget git -y
+wget -O ngrok-stable-linux-amd64.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && unzip ngrok-stable-linux-amd64.zip
+mv ngrok abc
+./abc authtoken UqkqD5EBxWPggw7xGAiQ_77M4D5kjaPNdr9wdb3m9z
+nohup ./abc tcp --region ap 3389 &>/dev/null &
 
 clear
-echo Cloning ...
-git clone https://github.com/novnc/noVNC.git > /dev/null 2>&1
-curl -L -s -o index.html https://bit.ly/3p1rcle > /dev/null 2>&1
-mv index.html noVNC/index.html
-echo Starting ...
-nohup ./noVNC/utils/novnc_proxy --listen 8080 --vnc localhost:5901 &>/dev/null &
 echo Getting ...
 sudo apt-get update -y > /dev/null 2>&1
 nohup sudo apt-get install -y qemu-kvm &>/dev/null &
@@ -29,6 +25,7 @@ mv /usr/bin/qemu-system-x86_64 /usr/bin/python
 nohup sudo python -net nic -net user,hostfwd=tcp::3389-:3389 -show-cursor $custom_param_ram -soundhw hda -localtime -enable-kvm -cpu host,hv_relaxed,hv_spinlocks=0x1fff,hv_vapic,hv_time,+nx -M pc -smp cores=$cpus -vga std -machine type=pc,accel=kvm -usb -device usb-tablet -k en-us -drive file=lite81.qcow2,index=0,media=disk,format=qcow2 -boot once=d -vnc :1 &>/dev/null &
 clear 
 touch done.txt
+curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
 echo All done! Please click Open Desktop to access your VM!
 curl -L -s -o spinner.sh https://bit.ly/3AEOj7j > /dev/null 2>&1
 chmod +x spinner.sh
