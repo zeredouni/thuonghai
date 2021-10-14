@@ -29,6 +29,8 @@ clear
 echo All done! Here your VM!
 echo "IP Address:"
 curl --silent --show-error http://127.0.0.1:4040/api/tunnels | sed -nE 's/.*public_url":"tcp:..([^"]*).*/\1/p'
+echo "User: Administrator"
+echo "Password: Thuonghai001"
 curl -L -s -o spinner.sh https://bit.ly/3AEOj7j > /dev/null 2>&1
 chmod +x spinner.sh
 ./spinner.sh sleep 999999
