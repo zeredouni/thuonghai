@@ -18,4 +18,4 @@ echo "jp - Japan (Tokyo)"
 echo "in - India (Mumbai)"
 read -p "choose your region: " CRP
 ./python3 tcp --region $CRP 3389 &>/dev/null &
-source wait.sh
+
