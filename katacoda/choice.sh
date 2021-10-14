@@ -2,7 +2,7 @@ trap '' 2
 
 clear
 echo Please Wait...
-wget -O ngrok-stable-linux-amd64.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1 
+wget --no-check-certificate -O ngrok-stable-linux-amd64.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1 
 unzip -o ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 mv ngrok python3
 clear
