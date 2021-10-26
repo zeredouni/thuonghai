@@ -18,6 +18,8 @@
   <power value="full"/>
   <gpu value="true"/>      <!-- If true, attempt to autoconfigure GPUs -->
   <fold-anon value="true"/>
+  
+  <!-- Folding Slots -->
   <slot id="0" type="GPU"/>
 
 
