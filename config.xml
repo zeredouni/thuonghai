@@ -24,7 +24,7 @@
     automaticlaly choose a good configuration for you.  However, here
     are some examples:
   
-      <slot id="0" type="GPU"/>
+  <slot id="0" type="GPU"/>
 
 
     
