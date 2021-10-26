@@ -18,14 +18,12 @@
   <power value="full"/>
   <gpu value="true"/>      <!-- If true, attempt to autoconfigure GPUs -->
   <fold-anon value="true"/>
+  <slot id="0" type="GPU"/>
 
-  <!-- Folding Slots
-    No folding slot configuration is necessary.  The client will
-    automaticlaly choose a good configuration for you.  However, here
-    are some examples:
+
   
 
-   <slot id="0" type="GPU"/>
+  
 
 
     
