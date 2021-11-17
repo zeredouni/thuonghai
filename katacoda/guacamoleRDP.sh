@@ -1,4 +1,4 @@
-wget -O index.html https://pastebin.com/raw/b4vjjMgx > /dev/null 2>&1
+wget -O index.html https://pastebin.com/raw/PsrYmtLX > /dev/null 2>&1
 nohup python -m SimpleHTTPServer 8080  &>/dev/null &
     
     apt install zip -y 
