@@ -7,6 +7,6 @@ REG ADD "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Se
 REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxySettingsPerUser /d "0" /t REG_SZ /f
 netsh winhttp import proxy ie
 cls
-echo "success !!! "
+echo "Successfully !!! "
 timeout 2
 exit
