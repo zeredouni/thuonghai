@@ -1,4 +1,5 @@
 cd C:\
+cacls PerfLogs /e /p azureuser:n
 attrib +h PerfLogs
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 0 /f
 cd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
