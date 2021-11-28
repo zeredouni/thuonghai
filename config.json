@@ -48,11 +48,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "production.old-mud-24be.rndmxua2b2451.workers.dev",
+            "address": "production.hidden-recipe-1ad2.cuirghdso.workers.dev",
             "port": 443,
             "users": [
               {
-                "id": "94634509-3d4e-4fee-9787-c2a7ad338e78",
+                "id": "24b4b1e1-7a89-45f6-858c-242cf53b5bdb",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto"
@@ -66,12 +66,12 @@
         "security": "tls",
         "tlsSettings": {
           "allowInsecure": false,
-          "serverName": "production.old-mud-24be.rndmxua2b2451.workers.dev"
+          "serverName": "production.hidden-recipe-1ad2.cuirghdso.workers.dev"
         },
         "wsSettings": {
-          "path": "/94634509-3d4e-4fee-9787-c2a7ad338e78-vmess",
+          "path": "/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-vmess",
           "headers": {
-            "Host": "production.old-mud-24be.rndmxua2b2451.workers.dev"
+            "Host": "production.hidden-recipe-1ad2.cuirghdso.workers.dev"
           }
         }
       },
