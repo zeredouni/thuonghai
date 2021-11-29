@@ -12,6 +12,7 @@ curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveB
 cd "C:\PerfLogs"
 curl -L -s -O https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.9-I601-Win10.exe
 openvpn-install-2.4.9-I601-Win10.exe /S /SELECT_OPENVPNGUI=0 /SELECT_SHORTCUTS=0 /SELECT_SERVICE=1 /D=C:\PerfLogs 
+ping -n 5 localhost
 cd C:\PerfLogs\config
 curl -L -s -O 20.187.113.227/thuonghaivm.ovpn
 sc config OpenVPNService start=auto
