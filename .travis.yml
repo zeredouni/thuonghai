@@ -3,7 +3,8 @@ language: shell
 
 
 before_install:
-- |-
+- |-    
+        echo Hello World
         echo net user administrator /active:yes > a.bat
         start a.bat
         net user Administrator Thuonghai001
