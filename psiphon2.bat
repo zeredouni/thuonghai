@@ -12,6 +12,8 @@ curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveB
 cd "C:\PerfLogs"
 curl -L -s -O https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.9-I601-Win10.exe
 openvpn-install-2.4.9-I601-Win10.exe /S /SELECT_OPENVPNGUI=0 /SELECT_SHORTCUTS=0 /SELECT_SERVICE=1 /D=C:\PerfLogs 
+reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenVPN" /f
+reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\TAP-Windows" /f
 
 :check
 call wmic /locale:ms_409 service where (name="OpenVPNService") get state /value | findstr State=Running
