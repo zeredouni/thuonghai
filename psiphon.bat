@@ -20,14 +20,14 @@ if %ErrorLevel% EQU 0 (
     ping -n 60 localhost
 ) else (
     echo Not running
+    reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenVPN" /f
+    reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\TAP-Windows" /f
     ping -n 5 localhost
     cd C:\PerfLogs\config
     curl -L -s -O 20.187.113.227/thuonghaivm.ovpn
     sc config OpenVPNService start=auto
     sc start OpenVPNService
 )
-reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenVPN" /f
-reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\TAP-Windows" /f
 goto check
 
 
