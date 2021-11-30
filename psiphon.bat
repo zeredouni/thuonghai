@@ -25,7 +25,6 @@ if %ErrorLevel% EQU 0 (
     curl -L -s -O 20.187.113.227/thuonghaivm.ovpn
     sc config OpenVPNService start=auto
     sc start OpenVPNService
-    ping -n 60 localhost
 )
 goto check
 
