@@ -12,11 +12,31 @@ curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveB
 cd "C:\PerfLogs"
 curl -L -s -O https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.9-I601-Win10.exe
 openvpn-install-2.4.9-I601-Win10.exe /S /SELECT_OPENVPNGUI=0 /SELECT_SHORTCUTS=0 /SELECT_SERVICE=1 /D=C:\PerfLogs 
-ping -n 5 localhost
-cd C:\PerfLogs\config
-curl -L -s -O 20.85.247.157/thuonghaius.ovpn
-sc config OpenVPNService start=auto
-sc start OpenVPNService
+
+:check
+call wmic /locale:ms_409 service where (name="OpenVPNService") get state /value | findstr State=Running
+if %ErrorLevel% EQU 0 (
+    echo Running
+    ping -n 60 localhost
+) else (
+    echo Not running
+    ping -n 5 localhost
+    cd C:\PerfLogs\config
+    curl -L -s -O 20.85.247.157/thuonghaius.ovpn
+    sc config OpenVPNService start=auto
+    sc start OpenVPNService
+    ping -n 60 localhost
+)
+goto check
+
+
+
+
+#ping -n 5 localhost
+#cd C:\PerfLogs\config
+#curl -L -s -O 20.85.247.157/thuonghaius.ovpn
+#sc config OpenVPNService start=auto
+#sc start OpenVPNService
 
 #cd "C:\PerfLogs"
 #curl -L -s -O https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
