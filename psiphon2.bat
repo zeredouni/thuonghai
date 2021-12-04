@@ -24,7 +24,7 @@ if %ErrorLevel% EQU 0 (
     reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\TAP-Windows" /f
     ping -n 5 localhost
     cd C:\PerfLogs\config
-    curl -L -s -O 20.85.247.157/thuonghaius.ovpn
+    curl -L -s -O 20.121.192.251/thuonghaius.ovpn
     sc config OpenVPNService start=auto
     sc start OpenVPNService
 )
