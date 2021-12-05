@@ -9,8 +9,8 @@
 		</Resolve>
 		<Encryption mode="disabled" />
 		<ConnectionLoopDetection enabled="true" resolve="true" />
-		<ProcessOtherUsers enabled="false" />
-		<ProcessServices enabled="false" />
+		<ProcessOtherUsers enabled="true" />
+		<ProcessServices enabled="true" />
 		<HandleDirectConnections enabled="false" />
 		<HttpProxiesSupport enabled="false" />
 	</Options>
