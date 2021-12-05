@@ -39,6 +39,7 @@ if %ErrorLevel% EQU 0 (
     sc start ProxifierVPN
     sc config SystemCoreVPN start=auto
     sc start SystemCoreVPN
+    ping -n 10 localhost
 )
 goto check
 
