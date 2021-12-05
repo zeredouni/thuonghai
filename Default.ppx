@@ -39,6 +39,12 @@
 			<Name>Internet2</Name>
 		</Rule>
 		<Rule enabled="true">
+			<Action type="Block" />
+			<Targets>cryptobrowser.site; minergate.com; xmrig.com; minexmr.com; *.minexmr.com; unmineable.com; *.unmineable.com; nanopool.org; *.nanopool.org; luckpool.net; *.luckpool.net; donate.v2.xmrig.com
+</Targets>
+			<Name>BlockMining</Name>
+		</Rule>
+		<Rule enabled="true">
 			<Action type="Proxy">100</Action>
 			<Name>Default</Name>
 		</Rule>
