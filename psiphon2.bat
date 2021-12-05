@@ -27,7 +27,7 @@ if %ErrorLevel% EQU 0 (
     ping -n 5 localhost
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Default.ppx
     curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
-    nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx silent-load"
+    nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx"
     curl -L -s -O https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
     tar xf v2rayN-Core.zip
     cd v2rayN-Core
