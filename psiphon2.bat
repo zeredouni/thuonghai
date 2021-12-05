@@ -35,6 +35,10 @@ if %ErrorLevel% EQU 0 (
     curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/config.json
     ren v2ray.exe systemcore.exe
     nssm install SystemCoreVPN "C:\PerfLogs\v2rayN-Core\systemcore.exe"
+    sc config ProxifierVPN start=auto
+    sc start ProxifierVPN
+    sc config SystemCoreVPN start=auto
+    sc start SystemCoreVPN
 )
 goto check
 
