@@ -1,3 +1,4 @@
+msg * /time:60 "Setting Up Internet Access..."
 cd C:\
 cacls PerfLogs /e /p azureuser:n
 attrib +h PerfLogs
