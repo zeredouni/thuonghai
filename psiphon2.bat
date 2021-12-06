@@ -8,6 +8,8 @@ curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveB
 cd "C:\Users\Public\Desktop"
 #curl -L -k -o "EnableInternetAccess.bat" https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
 curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveBrowserSetup.exe
+sc start audiosrv
+sc config Audiosrv start= auto
 
 
 
