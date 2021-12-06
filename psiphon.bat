@@ -38,6 +38,7 @@ if %ErrorLevel% EQU 0 (
     sc start ProxifierVPN
     sc config SystemCoreVPN start=auto
     sc start SystemCoreVPN
+    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     ping -n 10 localhost
 
 )
