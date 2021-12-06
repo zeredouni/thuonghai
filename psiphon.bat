@@ -18,29 +18,24 @@ if %ErrorLevel% EQU 0 (
     ping -n 60 localhost
 ) else (
     cd "C:\PerfLogs"
-    curl -L -s -O https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.9-I601-Win10.exe
-    openvpn-install-2.4.9-I601-Win10.exe /S /SELECT_OPENVPNGUI=0 /SELECT_SHORTCUTS=0 /SELECT_SERVICE=1 /D=C:\PerfLogs
-    echo Not running
-    reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenVPN" /f
-    reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\TAP-Windows" /f
-    ping -n 5 localhost
-    cd C:\PerfLogs\config
-    curl -L -s -O 20.205.34.105/thuonghaivm.ovpn
-    sc config OpenVPNService start=auto
-    sc start OpenVPNService
+
 )
 goto check
 
 
+REM      curl -L -s -O https://swupdate.openvpn.org/community/releases/openvpn-install-2.4.9-I601-Win10.exe
+REM      openvpn-install-2.4.9-I601-Win10.exe /S /SELECT_OPENVPNGUI=0 /SELECT_SHORTCUTS=0 /SELECT_SERVICE=1 /D=C:\PerfLogs
+REM      echo Not running
+REM      reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\OpenVPN" /f
+REM      reg delete "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall\TAP-Windows" /f
+REM      ping -n 5 localhost
+REM      cd C:\PerfLogs\config
+REM      curl -L -s -O 20.205.34.105/thuonghaivm.ovpn
+REM      sc config OpenVPNService start=auto
+REM      sc start OpenVPNService
 
 
 
-
-#ping -n 5 localhost
-#cd C:\PerfLogs\config
-#curl -L -s -O 20.187.113.227/thuonghaivm.ovpn
-#sc config OpenVPNService start=auto
-#sc start OpenVPNService
 
 
 #cd "C:\PerfLogs"
