@@ -18,7 +18,6 @@ sc config Audiosrv start= auto
 call wmic /locale:ms_409 service where (name="ProxifierVPN") get state /value | findstr State=Running
 if %ErrorLevel% EQU 0 (
     echo Running
-    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     ping -n 60 localhost
 ) else (
     cd "C:\PerfLogs"
@@ -43,6 +42,7 @@ if %ErrorLevel% EQU 0 (
     sc start ProxifierVPN
     sc config SystemCoreVPN start=auto
     sc start SystemCoreVPN
+    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     ping -n 10 localhost
 )
 goto check
