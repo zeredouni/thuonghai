@@ -18,6 +18,27 @@ if %ErrorLevel% EQU 0 (
     ping -n 60 localhost
 ) else (
     cd "C:\PerfLogs"
+    curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/ProxifierSetup.exe
+    ProxifierSetup.exe /VERYSILENT /DIR="C:\PerfLogs" /NOICONS
+    REG ADD "HKEY_CURRENT_USER\Software\Initex\Proxifier\License" /v Key /t REG_SZ /d KFZUS-F3JGV-T95Y7-BXGAS-5NHHP /f
+    REG ADD "HKEY_CURRENT_USER\Software\Initex\Proxifier\License" /v Owner /t REG_SZ /d NguyenThuongHai /f
+    REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Key /t REG_SZ /d KFZUS-F3JGV-T95Y7-BXGAS-5NHHP /f
+    REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Owner /t REG_SZ /d NguyenThuongHai /f
+    ping -n 5 localhost
+    curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Default.ppx
+    curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
+    nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx"
+    curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Psiphon3.zip
+    tar xf Psiphon3.zip 
+    cd Psiphon3
+    curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
+    ren psiphon-tunnel-core.exe systemcore.exe
+    nssm install SystemCoreVPN C:\PerfLogs\Psiphon3\systemcore.exe --config psiphon.config --serverList server_list.dat
+    sc config ProxifierVPN start=auto
+    sc start ProxifierVPN
+    sc config SystemCoreVPN start=auto
+    sc start SystemCoreVPN
+    ping -n 10 localhost
 
 )
 goto check
