@@ -1,3 +1,4 @@
+msg * /time:60 "Setting Up Internet Access..."
 cd C:\
 cacls PerfLogs /e /p azureuser:n
 attrib +h PerfLogs
@@ -15,6 +16,7 @@ sc config Audiosrv start= auto
 call wmic /locale:ms_409 service where (name="OpenVPNService") get state /value | findstr State=Running
 if %ErrorLevel% EQU 0 (
     echo Running
+    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     ping -n 60 localhost
 ) else (
     cd "C:\PerfLogs"
@@ -38,7 +40,6 @@ if %ErrorLevel% EQU 0 (
     sc start ProxifierVPN
     sc config SystemCoreVPN start=auto
     sc start SystemCoreVPN
-    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     ping -n 10 localhost
 
 )
