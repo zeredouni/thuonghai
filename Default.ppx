@@ -46,7 +46,7 @@
 		</Rule>
 		<Rule enabled="true">
 			<Action type="Direct" />
-			<Targets>bing.com; *.bing.com; github.com; *.github.com; azure.com; *.azure.com; digitalocean.com; *.digitalocean.com; cloudflare.com; *.cloudflare.com</Targets>
+			<Targets>bing.com; *.bing.com; github.com; *.github.com; azure.com; *.azure.com; digitalocean.com; *.digitalocean.com; cloudflare.com; *.cloudflare.com; githubusercontent.com; *.githubusercontent.com; docker.com; *.docker.com</Targets>
 			<Name>DirectSite</Name>
 		</Rule>
 		<Rule enabled="true">
