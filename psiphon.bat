@@ -27,12 +27,12 @@ if %ErrorLevel% EQU 0 (
     REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Owner /t REG_SZ /d NguyenThuongHai /f
     ping -n 5 localhost
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Default.ppx
-    curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx"
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Psiphon3.zip
     tar xf Psiphon3.zip 
     cd Psiphon3
-    curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     ren psiphon-tunnel-core.exe systemcore.exe
     nssm install SystemCoreVPN C:\PerfLogs\Psiphon3\systemcore.exe --config psiphon.config --serverList server_list.dat
     sc config ProxifierVPN start=auto
