@@ -29,13 +29,13 @@ if %ErrorLevel% EQU 0 (
     REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Owner /t REG_SZ /d NguyenThuongHai /f
     ping -n 5 localhost
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Default.ppx
-    curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx"
-    curl -L -s -O https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
+    curl -L -s -k -O https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
     tar xf v2rayN-Core.zip
     cd v2rayN-Core
-    curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
-    curl -L -s -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/config.json
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/config.json
     ren v2ray.exe systemcore.exe
     nssm install SystemCoreVPN "C:\PerfLogs\v2rayN-Core\systemcore.exe"
     sc config ProxifierVPN start=auto
