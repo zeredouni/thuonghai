@@ -48,11 +48,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "production.dry-bonus-3365.rndmxua2b2451.workers.dev",
+            "address": "sweet-recipe-049a.haithuongpro2711.workers.dev",
             "port": 443,
             "users": [
               {
-                "id": "94634509-3d4e-4fee-9787-c2a7ad338e78",
+                "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto"
@@ -65,14 +65,11 @@
         "network": "ws",
         "security": "tls",
         "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "production.dry-bonus-3365.rndmxua2b2451.workers.dev"
+          "allowInsecure": true,
+          "serverName": "sweet-recipe-049a.haithuongpro2711.workers.dev"
         },
         "wsSettings": {
-          "path": "/94634509-3d4e-4fee-9787-c2a7ad338e78-vmess",
-          "headers": {
-            "Host": "production.dry-bonus-3365.rndmxua2b2451.workers.dev"
-          }
+          "path": "/"
         }
       },
       "mux": {
