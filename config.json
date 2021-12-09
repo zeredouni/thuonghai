@@ -48,11 +48,11 @@
       "settings": {
         "vnext": [
           {
-            "address": "production.hidden-recipe-1ad2.cuirghdso.workers.dev",
+            "address": "still-breeze-5b22.thuonghai27112126.workers.dev",
             "port": 443,
             "users": [
               {
-                "id": "24b4b1e1-7a89-45f6-858c-242cf53b5bdb",
+                "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
                 "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto"
@@ -65,14 +65,11 @@
         "network": "ws",
         "security": "tls",
         "tlsSettings": {
-          "allowInsecure": false,
-          "serverName": "production.hidden-recipe-1ad2.cuirghdso.workers.dev"
+          "allowInsecure": true,
+          "serverName": "still-breeze-5b22.thuonghai27112126.workers.dev"
         },
         "wsSettings": {
-          "path": "/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-vmess",
-          "headers": {
-            "Host": "production.hidden-recipe-1ad2.cuirghdso.workers.dev"
-          }
+          "path": "/"
         }
       },
       "mux": {
