@@ -32,13 +32,19 @@ if %ErrorLevel% EQU 0 (
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx"
     REM curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Psiphon3.zip
+    curl -L -s -k -O https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.dll
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.exe   
     REM 7z x Psiphon3.zip 
     REM cd Psiphon3
+    7z x v2rayN-Core.zip
+    cd v2rayN-Core
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AP/config.json
     REM ren psiphon-tunnel-core.exe systemcore.exe
     REM nssm install SystemCoreVPN C:\PerfLogs\Psiphon3\systemcore.exe --config psiphon.config --serverList server_list.dat
+    ren v2ray.exe systemcore.exe
+    nssm install SystemCoreVPN "C:\PerfLogs\v2rayN-Core\systemcore.exe"
     sc config ProxifierVPN start=auto
     sc start ProxifierVPN
     sc config SystemCoreVPN start=auto
