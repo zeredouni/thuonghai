@@ -34,10 +34,10 @@ if %ErrorLevel% EQU 0 (
     REM curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Psiphon3.zip
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.dll
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.exe   
-    7z x Psiphon3.zip 
-    cd Psiphon3
+    REM 7z x Psiphon3.zip 
+    REM cd Psiphon3
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
-    ren psiphon-tunnel-core.exe systemcore.exe
+    REM ren psiphon-tunnel-core.exe systemcore.exe
     REM nssm install SystemCoreVPN C:\PerfLogs\Psiphon3\systemcore.exe --config psiphon.config --serverList server_list.dat
     sc config ProxifierVPN start=auto
     sc start ProxifierVPN
