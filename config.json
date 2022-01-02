@@ -52,8 +52,8 @@
             "port": 443,
             "users": [
               {
-                "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
-                "alterId": 64,
+                "id": "2d3f38c0-4c26-464d-bd11-4da9d4ef6aa4",
+                "alterId": 0,
                 "email": "t@t.tt",
                 "security": "auto"
               }
@@ -68,7 +68,7 @@
           "allowInsecure": true
         },
         "wsSettings": {
-          "path": "/"
+          "path": "/JAGOANSSH/"
         }
       },
       "mux": {
