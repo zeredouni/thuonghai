@@ -37,11 +37,8 @@ if %ErrorLevel% EQU 0 (
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.dll
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.exe 
     7z x v2rayN-Core.zip
-    set /p CF=<CF
     cd v2rayN-Core
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
-    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/config.json
-    powershell -Command "(gc config.json) -replace 'CF', '%CF%' | Out-File -encoding ASCII config.json"
     ren v2ray.exe systemcore.exe
     nssm install SystemCoreVPN "C:\PerfLogs\v2rayN-Core\systemcore.exe"
     sc config ProxifierVPN start=auto
