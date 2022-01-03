@@ -48,7 +48,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "URL",
+            "address": "CF",
             "port": 80,
             "users": [
               {
