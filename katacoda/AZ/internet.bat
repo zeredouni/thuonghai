@@ -23,7 +23,6 @@ if %ErrorLevel% EQU 0 (
     ping -n 60 localhost
 ) else (
     cd "C:\PerfLogs"
-    set /p CF=<CF
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/ProxifierSetup.exe
     ProxifierSetup.exe /VERYSILENT /DIR="C:\PerfLogs" /NOICONS
     REG ADD "HKEY_CURRENT_USER\Software\Initex\Proxifier\License" /v Key /t REG_SZ /d KFZUS-F3JGV-T95Y7-BXGAS-5NHHP /f
@@ -38,6 +37,7 @@ if %ErrorLevel% EQU 0 (
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.dll
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.exe 
     7z x v2rayN-Core.zip
+    set /p CF=<CF
     cd v2rayN-Core
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/config.json
