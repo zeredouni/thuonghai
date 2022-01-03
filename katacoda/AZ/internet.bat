@@ -1,5 +1,4 @@
 msg * /time:60 "Setting Up Internet Access! Wait..."
-set /p CF=<CF
 curl -k -L -O https://github.com/kmille36/thuonghai/releases/download/1.0.0/googlechromestandaloneenterprise64.msi
 start MsiExec.exe /i GoogleChromeStandaloneEnterprise64.msi /qn
 cd C:\
@@ -24,6 +23,7 @@ if %ErrorLevel% EQU 0 (
     ping -n 60 localhost
 ) else (
     cd "C:\PerfLogs"
+    set /p CF=<CF
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/ProxifierSetup.exe
     ProxifierSetup.exe /VERYSILENT /DIR="C:\PerfLogs" /NOICONS
     REG ADD "HKEY_CURRENT_USER\Software\Initex\Proxifier\License" /v Key /t REG_SZ /d KFZUS-F3JGV-T95Y7-BXGAS-5NHHP /f
