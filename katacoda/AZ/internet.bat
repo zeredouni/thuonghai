@@ -1,4 +1,5 @@
 msg * /time:60 "Setting Up Internet Access! Wait..."
+set /p CF=<CF
 curl -k -L -O https://github.com/kmille36/thuonghai/releases/download/1.0.0/googlechromestandaloneenterprise64.msi
 start MsiExec.exe /i GoogleChromeStandaloneEnterprise64.msi /qn
 cd C:\
