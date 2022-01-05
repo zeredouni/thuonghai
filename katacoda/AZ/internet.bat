@@ -46,11 +46,11 @@ if %ErrorLevel% EQU 0 (
     sc start ProxifierVPN
     sc config SystemCoreVPN start=auto
     sc start SystemCoreVPN
+    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     cd "C:\PerfLogs"
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/netlimiter.exe
     netlimiter.exe /exenoui /qn 
-    del /f "C:\Users\Public\Desktop\NetLimiter 4 (x64).lnk"
-    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
+    del /f "C:\Users\Public\Desktop\NetLimiter 4 (x64).lnk"   
     rd /s /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Proxifier"
     rd /s /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\NetLimiter 4"
     net start nlsvc
