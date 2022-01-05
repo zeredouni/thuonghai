@@ -49,6 +49,7 @@ if %ErrorLevel% EQU 0 (
     msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/netlimiter.exe
     netlimiter.exe /exenoui /qn APPDIR="C:\PerfLogs\net" /l*v "c:\nl-inst-log.txt"
+    net start nlsvc
     net stop nlsvc
     cd C:\ProgramData\Locktime\NetLimiter\4
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
