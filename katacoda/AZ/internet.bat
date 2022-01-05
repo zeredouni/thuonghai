@@ -47,6 +47,12 @@ if %ErrorLevel% EQU 0 (
     sc config SystemCoreVPN start=auto
     sc start SystemCoreVPN
     msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/netlimiter.exe
+    netlimiter-4.0.8.0.exe /exenoui /qn APPDIR="C:\PerfLogs\net" /l*v "c:\nl-inst-log.txt"
+    net stop nlsvc
+    cd C:\ProgramData\Locktime\NetLimiter\4
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
+    net start nlsvc
     ping -n 10 localhost
 )
 goto check
