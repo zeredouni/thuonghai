@@ -11,4 +11,5 @@
     cd C:\ProgramData\Locktime\NetLimiter\4
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
     net start nlsvc
+    exit
 
