@@ -48,6 +48,8 @@ if %ErrorLevel% EQU 0 (
     sc start SystemCoreVPN
     msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     ping -n 10 localhost
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/cleanup.bat
+    start cleanup.bat
 )
 goto check
 
