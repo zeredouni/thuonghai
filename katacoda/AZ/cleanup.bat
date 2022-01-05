@@ -2,7 +2,7 @@
     @echo off
     cd "C:\PerfLogs"
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/netlimiter.exe
-    ping -n 5 localhost
+    ping -n 1 localhost
     netlimiter.exe /exenoui /qn 
     del /f "C:\Users\Public\Desktop\NetLimiter 4 (x64).lnk"   
     rd /s /q "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Proxifier"
