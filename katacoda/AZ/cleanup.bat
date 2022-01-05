@@ -12,5 +12,5 @@
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
     net start nlsvc
     cd "C:\Program Files"
-    cacls Locktime Software /e /p azureuser:n
+    cacls "Locktime Software" /e /p azureuser:n
     exit
