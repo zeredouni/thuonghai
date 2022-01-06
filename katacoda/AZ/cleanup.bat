@@ -1,4 +1,10 @@
-
+@echo off
+:checklimit
+call wmic /locale:ms_409 service where (name="nlsvc") get state /value | findstr State=Running
+if %ErrorLevel% EQU 0 (
+    echo Running
+    exit
+) else (
     @echo off
     cd "C:\PerfLogs"
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/netlimiter.exe
@@ -12,5 +18,7 @@
     cd C:\ProgramData\Locktime\NetLimiter\4
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
     net start nlsvc
+)
+goto checklimit
   
 
