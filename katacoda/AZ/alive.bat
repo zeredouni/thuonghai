@@ -1,5 +1,5 @@
 echo off
 :test
-curl URL
-ping -n 10 URL
+curl URLH
+ping -n 10 URLH
 goto test
