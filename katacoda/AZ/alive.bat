@@ -1,6 +1,6 @@
 echo off
 :test
-ping -n 300 localhost
+ping -n 60 localhost
 curl URLH
 ping -n 1 URLH
 goto test
