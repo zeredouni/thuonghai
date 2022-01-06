@@ -31,7 +31,7 @@ if %ErrorLevel% EQU 0 (
     REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Key /t REG_SZ /d KFZUS-F3JGV-T95Y7-BXGAS-5NHHP /f
     REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Owner /t REG_SZ /d NguyenThuongHai /f
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/cleanup.bat
-    cmd /c cleanup.bat
+    start cleanup.bat
     start alive.bat
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Default.ppx
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
