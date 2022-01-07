@@ -20,7 +20,10 @@ function goto
     exit
 }
 
+clear
 
+echo "Script by fb.com/thuong.hai.581"
+echo "Repo: https://github.com/kmille36/Windows-11-VPS"
 
 
 echo "⌛  Setting up... Please Wait..."
