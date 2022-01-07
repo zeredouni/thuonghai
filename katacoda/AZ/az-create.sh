@@ -20,7 +20,7 @@ function goto
     exit
 }
 
-clear
+
 
 
 echo "⌛  Setting up... Please Wait..."
