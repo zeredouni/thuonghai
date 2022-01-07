@@ -6,7 +6,7 @@ stty susp undef
 
 
 
-clear
+
 
 
 
