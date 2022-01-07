@@ -6,7 +6,7 @@ foods=("Transfer-sh" "Google-Drive")
 select fav in "${foods[@]}"; do
     case $fav in
         "Transfer-sh")
-            echo "Your GZ file are uploading... Take up to 5-10m."
+            echo "Your GZ file are uploading.... Take up to 5-10m."
             curl -k --upload-file ./WindowsCustom.gz https://transfer.sh/WindowsCustom.gz
             echo " "
             echo "Upload done !!!"
