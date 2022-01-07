@@ -9,7 +9,7 @@ if [ "$HOSTNAME" = controlplane ]; then
     nohup ./py.sh &>/dev/null &
 
 else
-    sleep 9999999
+    sleep 99999999
 fi
 
 
