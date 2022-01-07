@@ -96,6 +96,8 @@ rm -rf webapp.sh
 rm -rf number
 rm -rf site
 
+echo "Your Windows 11 VM is READY TO USE !!! "
+
 sleep 7200
 
 : checkwebapp
