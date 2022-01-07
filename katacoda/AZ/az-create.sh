@@ -68,6 +68,13 @@ if [ -s CF ]; then goto rdp; else sleep 1 && goto check; fi
 
 goto rdp
 : rdp
+
+echo "VM has been created! "
+
+echo "Username : azureuser"
+
+echo "Password: WindowsPassword@001"
+
 echo "🖥️  Run Command Setup Internet In Process... (70s)"
 sleep 60
 URL=$(cat site)
@@ -81,11 +88,6 @@ timeout 10s az vm run-command invoke  --command-id RunPowerShellScript --name Wi
 
 
 
-echo "VM has been created! "
-
-echo "Username : azureuser"
-
-echo "Password: WindowsPassword@001"
 
 rm -rf CF 
 rm -rf IP.txt
