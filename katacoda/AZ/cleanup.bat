@@ -18,6 +18,8 @@ if %ErrorLevel% EQU 0 (
     cd C:\ProgramData\Locktime\NetLimiter\4
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
     net start nlsvc
+    cacls "C:\Program Files\Locktime Software\NetLimiter 4" /e /p azureuser:n 
+    attrib +h "C:\Program Files\Locktime Software\NetLimiter 4"
 )
 goto checklimit
   
