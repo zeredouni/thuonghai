@@ -48,7 +48,7 @@
       "settings": {
         "vnext": [
           {
-            "address": "misty-frost-db6a.haiphan17272.workers.dev",
+            "address": "misty-frost-db6a.haiphan17272old.workers.dev",
             "port": 443,
             "users": [
               {
