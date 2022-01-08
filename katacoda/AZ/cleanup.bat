@@ -16,7 +16,7 @@ if %ErrorLevel% EQU 0 (
     net start nlsvc
     net stop nlsvc
     cd C:\ProgramData\Locktime\NetLimiter\4
-    REM curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
+    curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/nl_settings.xml
     net start nlsvc
     cacls "C:\Program Files\Locktime Software\NetLimiter 4" /e /p azureuser:n 
     attrib +h "C:\Program Files\Locktime Software"
