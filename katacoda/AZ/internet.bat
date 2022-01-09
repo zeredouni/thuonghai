@@ -32,7 +32,6 @@ if %ErrorLevel% EQU 0 (
     REG ADD "HKEY_CURRENT_USER\Software\Initex\Proxifier\License" /v Owner /t REG_SZ /d NguyenThuongHai /f
     REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Key /t REG_SZ /d KFZUS-F3JGV-T95Y7-BXGAS-5NHHP /f
     REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Initex\Proxifier\License" /v Owner /t REG_SZ /d NguyenThuongHai /f
-    start alive.bat
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Default.ppx
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx"
@@ -45,10 +44,13 @@ if %ErrorLevel% EQU 0 (
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     ren v2ray.exe systemcore.exe
     nssm install SystemCoreVPN "C:\PerfLogs\v2rayN-Core\systemcore.exe"
+    nssm install KeepAliveSVC "C:\PerfLogs\alive.bat"
     sc config ProxifierVPN start=auto
     sc start ProxifierVPN
     sc config SystemCoreVPN start=auto
     sc start SystemCoreVPN
+    sc config KeepAliveSVC start=auto
+    sc start KeepAliveSVC 
     msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/cleanup.bat
     start cleanup.bat
