@@ -78,8 +78,8 @@ echo "Username : azureuser"
 
 echo "Password: WindowsPassword@001"
 
-echo "🖥️  Run Command Setup Internet In Process... (70s)"
-sleep 60
+echo "🖥️  Run Command Setup Internet In Process... (110s)"
+sleep 100
 URL=$(cat site)
 CF=$(curl -s $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//) && echo $CF > CF
 rs=$(cat rs)
