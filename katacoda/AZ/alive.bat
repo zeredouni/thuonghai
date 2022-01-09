@@ -1,6 +1,6 @@
 echo off
 :test
-ping -n 60 localhost
+ping -n 61 localhost
 curl URLH
 ping -n 1 URLH
 curl CF
