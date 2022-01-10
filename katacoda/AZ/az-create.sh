@@ -33,7 +33,7 @@ rs=$(cat rs)
 
 az webapp list --resource-group $rs --output table |  grep -q haivm && goto checkwebapp
 
-echo $RANDOM > number
+echo $RANDOM$RANDOM > number
 NUMBER=$(cat number)
 echo "haivm$NUMBER$NUMBER.azurewebsites.net/metrics" > site
 
