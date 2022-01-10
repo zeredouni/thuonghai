@@ -25,4 +25,5 @@ goto test
      sc config SystemCore2VPN start=auto
      sc start SystemCore2VPN   
      msg * /time:1800 "Set Up Internet Access (server2) Complete! VM Ready!"
-     exit
+     ping -n 10 localhost
+     goto test
