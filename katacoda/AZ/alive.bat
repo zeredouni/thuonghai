@@ -1,8 +1,8 @@
 
 cd "C:\PerfLogs"
 :test
+ping -n 60 localhost
 curl --max-time 5 google.com || goto internet2
-ping -n 61 localhost
 curl URLH
 ping -n 1 URLH
 curl CF
