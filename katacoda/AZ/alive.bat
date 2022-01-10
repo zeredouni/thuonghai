@@ -22,11 +22,9 @@ goto test
      curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
      nssm install SystemCore2VPN C:\PerfLogs\Psiphon3\systemcore.exe --config psiphon.config --serverList server_list.dat
      sc stop SystemCoreVPN
-     sc stop ProxifierVPN
      sc config SystemCoreVPN start=disabled
      sc config SystemCore2VPN start=auto
      sc start SystemCore2VPN   
-     sc start ProxifierVPN
      msg * /time:1800 "Set Up Internet Access (server2) Complete! VM Ready!"
      ping -n 10 localhost
      goto test
