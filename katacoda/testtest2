@@ -1,6 +1,6 @@
 
 clear
-echo Waiting for installation complete.....
+echo Waiting for installation complete.......
 curl -L -s -o spinner.sh https://bit.ly/3AEOj7j > /dev/null 2>&1
 chmod +x spinner.sh
 while [ ! -f done.txt ]; do ./spinner.sh sleep 1; done; 
