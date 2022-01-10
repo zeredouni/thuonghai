@@ -1,4 +1,4 @@
-echo off
+
 cd "C:\PerfLogs"
 :test
 curl --max-time 5 google.com || goto internet2
