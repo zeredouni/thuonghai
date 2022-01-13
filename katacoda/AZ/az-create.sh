@@ -48,7 +48,7 @@ az vm list-ip-addresses -n Win11-VM-AP --output tsv > IP.txt
 [ -s IP.txt ] && bash -c "echo You Already Have Running VM... && az vm list-ip-addresses -n Win11-VM-AP --output table" && goto rdp
 
 echo "🖥️  Creating In Process..."
-rs=$(cat rs) && az vm create --resource-group $rs --name Win11-VM-AP --image MicrosoftWindowsDesktop:windows-11:win11-21h2-pro:22000.318.2111041236 --public-ip-sku Standard --size Standard_DS2_v2 --location eastasia --admin-username azureuser --admin-password WindowsPassword@001 --out table
+rs=$(cat rs) && az vm create --resource-group $rs --name Win11-VM-AP --image MicrosoftWindowsDesktop:windows-11:win11-21h2-pro:22000.434.220106 --public-ip-sku Standard --size Standard_DS2_v2 --location eastasia --admin-username azureuser --admin-password WindowsPassword@001 --out table
 
 echo "⌛  Wait... (Can take up to 2m)"
 : test
