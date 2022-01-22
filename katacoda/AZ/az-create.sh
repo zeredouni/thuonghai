@@ -75,9 +75,15 @@ if [ -s CF2 ]; then goto rdp; else echo -en "\r Checking .     $i 🌐 ";sleep 0
 goto rdp
 : rdp
 
-echo -en "VM has been created! "
+rs=$(cat rs)
 
-echo "Username : azureuser"
+echo " Done! "
+
+IP=$(az vm show -d -g $rs -n Win11-VM-AP --query publicIps -o tsv)
+
+echo "Public IP: $IP"
+
+echo "Username: azureuser"
 
 echo "Password: WindowsPassword@001"
 
