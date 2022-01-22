@@ -50,8 +50,9 @@ az vm list-ip-addresses -n Win11-VM-AP --output tsv > IP.txt
 echo "🖥️  Creating In Process..."
 rs=$(cat rs) && az vm create --resource-group $rs --name Win11-VM-AP --image MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-m365:22000.376.2112141747 --public-ip-sku Standard --size Standard_DS2_v2 --location eastasia --admin-username azureuser --admin-password WindowsPassword@001 --out table
 
-echo "⌛  Wait... (Can take up to 2m)"
+
 : test
+echo "⌛  Wait... (Can take up to 2m)"
 URL=$(cat site)
 CF=$(curl -s --connect-timeout 1 --max-time 2 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
