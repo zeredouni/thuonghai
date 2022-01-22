@@ -2,7 +2,7 @@
 :checklimit
 call wmic /locale:ms_409 service where (name="nlsvc") get state /value | findstr State=Running
 if %ErrorLevel% EQU 0 (
-    echo Running
+    echo "Running"
     exit
 ) else (
     @echo off
