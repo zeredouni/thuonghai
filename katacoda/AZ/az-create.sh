@@ -62,9 +62,9 @@ if [ -s CF ]; then goto rdp; else goto webapp; fi
 rs=$(cat rs) 
 NUMBER=$(cat number)
 #az webapp config appsettings set --resource-group $rs --name haivm$NUMBER$NUMBER --settings WEBSITES_PORT=8081 --output none
-goto check
+goto acheck
 
-: check
+: acheck
 URL=$(cat site)
 CF=$(curl -s --connect-timeout 1 --max-time 2 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
