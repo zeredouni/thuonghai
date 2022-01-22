@@ -70,7 +70,7 @@ URL=$(cat site)
 CF=$(curl -s --connect-timeout 5 --max-time 5 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
 cat CF | grep trycloudflare.com > CF2
-if [ -s CF2 ]; then goto rdp; else echo -en "\r Checking .     $i %";sleep 0.1;echo -en "\r Checking ..    $i %";sleep 0.1;echo -en "\r Checking ...   $i %";sleep 0.1;echo -en "\r Checking ....  $i %";sleep 0.1;echo -en "\r Checking ..... $i %";sleep 0.1;echo -en "\r Checking     . $i %";sleep 0.1;echo -en "\r Checking  .... $i %";sleep 0.1;echo -en "\r Checking   ... $i %";sleep 0.1;echo -en "\r Checking    .. $i %";sleep 0.1;echo -en "\r Checking     . $i %";sleep 0.1 && goto pingcf; fi
+if [ -s CF2 ]; then goto rdp; else echo -en "\r Checking .     $i 🌐";sleep 0.1;echo -en "\r Checking ..    $i 🌐";sleep 0.1;echo -en "\r Checking ...   $i 🌐";sleep 0.1;echo -en "\r Checking ....  $i 🌐";sleep 0.1;echo -en "\r Checking ..... $i 🌐";sleep 0.1;echo -en "\r Checking     . $i 🌐";sleep 0.1;echo -en "\r Checking  .... $i 🌐";sleep 0.1;echo -en "\r Checking   ... $i 🌐";sleep 0.1;echo -en "\r Checking    .. $i 🌐";sleep 0.1;echo -en "\r Checking     . $i 🌐";sleep 0.1 && goto pingcf; fi
 
 goto rdp
 : rdp
