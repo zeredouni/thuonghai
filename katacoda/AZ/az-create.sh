@@ -54,7 +54,7 @@ rs=$(cat rs) && az vm create --resource-group $rs --name Win11-VM-AP --image Mic
 : test
 echo "⌛  Wait... (Can take up to 2m)"
 URL=$(cat site)
-CF=$(curl -s --connect-timeout 1 --max-time 2 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
+CF=$(curl -s --connect-timeout 5 --max-time 5 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
 cat CF | grep trycloudflare.com > CF
 if [ -s CF ]; then goto rdp; else goto webapp; fi
@@ -67,7 +67,7 @@ goto pingcf
 
 : pingcf
 URL=$(cat site)
-CF=$(curl -s --connect-timeout 1 --max-time 2 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
+CF=$(curl -s --connect-timeout 5 --max-time 5 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
 cat CF | grep trycloudflare.com > CF
 if [ -s CF ]; then goto rdp; else sleep 1 && goto pingcf; fi
