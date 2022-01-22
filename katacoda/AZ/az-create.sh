@@ -55,6 +55,7 @@ echo "⌛  Wait... (Can take up to 2m)"
 URL=$(cat site)
 CF=$(curl -s --connect-timeout 1 --max-time 2 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
+cat CF | grep trycloudflare.com > CF
 if [ -s CF ]; then goto rdp; else goto webapp; fi
 
 : webapp
