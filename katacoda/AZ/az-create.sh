@@ -56,8 +56,8 @@ echo "⌛  Wait... (Can take up to 2m)"
 URL=$(cat site)
 CF=$(curl -s --connect-timeout 5 --max-time 5 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
-cat CF | grep trycloudflare.com > CF
-if [ -s CF ]; then goto rdp; else goto webapp; fi
+cat CF | grep trycloudflare.com > CF2
+if [ -s CF2 ]; then goto rdp; else goto webapp; fi
 
 : webapp
 rs=$(cat rs) 
@@ -69,8 +69,8 @@ goto pingcf
 URL=$(cat site)
 CF=$(curl -s --connect-timeout 5 --max-time 5 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
-cat CF | grep trycloudflare.com > CF
-if [ -s CF ]; then goto rdp; else sleep 1 && goto pingcf; fi
+cat CF | grep trycloudflare.com > CF2
+if [ -s CF2 ]; then goto rdp; else sleep 1 && goto pingcf; fi
 
 goto rdp
 : rdp
@@ -96,6 +96,7 @@ timeout 10s az vm run-command invoke  --command-id RunPowerShellScript --name Wi
 
 
 rm -rf CF 
+rm -rf CF2
 rm -rf IP.txt
 rm -rf rs
 rm -rf webapp.sh
