@@ -45,7 +45,7 @@ goto checkvm
 : checkvm
 echo "⌛  Checking Previous VM..."
 az vm list-ip-addresses -n Win11-VM-AP --output tsv > IP.txt 
-[ -s IP.txt ] && bash -c "echo You Already Have Running VM... && az vm list-ip-addresses -n Win11-VM-AP --output table" && goto check
+[ -s IP.txt ] && bash -c "echo You Already Have Running VM... && az vm list-ip-addresses -n Win11-VM-AP --output table" && goto test
 
 echo "🖥️  Creating In Process..."
 rs=$(cat rs) && az vm create --resource-group $rs --name Win11-VM-AP --image MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-m365:22000.376.2112141747 --public-ip-sku Standard --size Standard_DS2_v2 --location eastasia --admin-username azureuser --admin-password WindowsPassword@001 --out table
