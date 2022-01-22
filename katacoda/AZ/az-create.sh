@@ -72,13 +72,14 @@ echo -n $CF > CF
 cat CF | grep trycloudflare.com > CF2
 if [ -s CF2 ]; then goto rdp; else echo -en "\r Checking .     $i 🌐 ";sleep 0.1;echo -en "\r Checking ..    $i 🌐 ";sleep 0.1;echo -en "\r Checking ...   $i 🌐 ";sleep 0.1;echo -en "\r Checking ....  $i 🌐 ";sleep 0.1;echo -en "\r Checking ..... $i 🌐 ";sleep 0.1;echo -en "\r Checking     . $i 🌐 ";sleep 0.1;echo -en "\r Checking  .... $i 🌐 ";sleep 0.1;echo -en "\r Checking   ... $i 🌐 ";sleep 0.1;echo -en "\r Checking    .. $i 🌐 ";sleep 0.1;echo -en "\r Checking     . $i 🌐 ";sleep 0.1 && goto pingcf; fi
 
-echo "Open all ports on a VM to inbound traffic"
-az vm open-port --resource-group $rs --name Win11-VM-AP --port '*' --output none
 
 goto rdp
 : rdp
 
 rs=$(cat rs)
+
+echo "Open all ports on a VM to inbound traffic"
+az vm open-port --resource-group $rs --name Win11-VM-AP --port '*' --output none
 
 echo " Done! "
 
