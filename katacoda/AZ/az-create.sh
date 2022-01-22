@@ -52,7 +52,7 @@ rs=$(cat rs) && az vm create --resource-group $rs --name Win11-VM-AP --image Mic
 
 
 : test
-echo "⌛  Wait... (Can take up to 2m)"
+echo "⌛  Wait... (Can take up to 2 minutes)"
 URL=$(cat site)
 CF=$(curl -s --connect-timeout 5 --max-time 5 $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | sed s/'http[s]\?:\/\/'//)
 echo -n $CF > CF
@@ -75,7 +75,7 @@ if [ -s CF2 ]; then goto rdp; else echo -en "\r Checking .     $i 🌐 ";sleep 0
 goto rdp
 : rdp
 
-echo "VM has been created! "
+echo -en "VM has been created! "
 
 echo "Username : azureuser"
 
