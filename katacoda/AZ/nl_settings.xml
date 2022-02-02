@@ -41,7 +41,7 @@
       <FileVersion>4.7.0.1</FileVersion>
       <ProductName>Proxifier Standard Edition</ProductName>
       <ProductVersion>4.7.0.1</ProductVersion>
-      <SysCreated>2022-01-05T11:43:14.7385589Z</SysCreated>
+      <SysCreated>2022-02-02T13:03:22.5971701Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo>
@@ -106,7 +106,7 @@
       <FileVersion>96.0.4664.110</FileVersion>
       <ProductName>Google Chrome</ProductName>
       <ProductVersion>96.0.4664.110</ProductVersion>
-      <SysCreated>2022-01-05T11:44:08.9917853Z</SysCreated>
+      <SysCreated>2022-02-02T13:04:07.4993791Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo>
@@ -142,10 +142,10 @@
       </AppId>
       <CompanyName>Microsoft Corporation</CompanyName>
       <FileDescription>Microsoft Teams</FileDescription>
-      <FileVersion>1.4.00.19572</FileVersion>
+      <FileVersion>1.4.00.22976</FileVersion>
       <ProductName>Microsoft Teams</ProductName>
-      <ProductVersion>1.4.00.19572</ProductVersion>
-      <SysCreated>2022-01-05T11:45:39.2817514Z</SysCreated>
+      <ProductVersion>1.4.00.22976</ProductVersion>
+      <SysCreated>2022-02-02T13:04:11.8631488Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo i:type="SvcAppInfo">
@@ -277,18 +277,18 @@
       </AppId>
       <CompanyName>Microsoft Corporation</CompanyName>
       <FileDescription />
-      <FileVersion>421.21100.85.0</FileVersion>
+      <FileVersion>421.22500.585.0</FileVersion>
       <ProductName>Microsoft® Windows® Operating System</ProductName>
-      <ProductVersion>421.21100.85.0</ProductVersion>
-      <SysCreated>2021-11-18T01:39:13.6003813Z</SysCreated>
+      <ProductVersion>421.22500.585.0</ProductVersion>
+      <SysCreated>2021-12-14T19:25:38.1492542Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
       <IconPath>Assets\Square44x44Logo.png</IconPath>
       <PackageDisplayName>ms-resource:ProductPkgDisplayName</PackageDisplayName>
-      <PackageFolder>C:\Windows\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy</PackageFolder>
-      <PackageId>MicrosoftWindows.Client.CBS_1000.22000.318.0_x64__cw5n1h2txyewy</PackageId>
+      <PackageFolder>C:\windows\systemapps\microsoftwindows.client.cbs_cw5n1h2txyewy</PackageFolder>
+      <PackageId>MicrosoftWindows.Client.CBS_1000.22000.376.0_x64__cw5n1h2txyewy</PackageId>
       <PackageName>MicrosoftWindows.Client.CBS</PackageName>
       <PackagePublisher>ms-resource:ProductPublisherDisplayName</PackagePublisher>
-      <PackageVersion>1000.22000.318.0</PackageVersion>
+      <PackageVersion>1000.22000.376.0</PackageVersion>
     </AppInfo>
     <AppInfo>
       <AppId>
@@ -300,7 +300,7 @@
       <FileVersion>21.220.1024.0005</FileVersion>
       <ProductName>Microsoft OneDrive</ProductName>
       <ProductVersion>21.220.1024.0005</ProductVersion>
-      <SysCreated>2022-01-05T11:45:47.4575984Z</SysCreated>
+      <SysCreated>2021-12-14T20:50:04.0141214Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo i:type="StoreAppInfo">
@@ -332,10 +332,10 @@
       </AppId>
       <CompanyName>Microsoft Corporation</CompanyName>
       <FileDescription>Microsoft Office Click-to-Run Client</FileDescription>
-      <FileVersion>16.0.14430.20314</FileVersion>
+      <FileVersion>16.0.14527.20318</FileVersion>
       <ProductName>Microsoft Office</ProductName>
-      <ProductVersion>16.0.14430.20314</ProductVersion>
-      <SysCreated>2021-11-18T02:42:30.869787Z</SysCreated>
+      <ProductVersion>16.0.14527.20318</ProductVersion>
+      <SysCreated>2021-12-14T20:42:00.3793725Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo>
@@ -813,6 +813,45 @@
       <ServiceDesc>Windows License Manager Service</ServiceDesc>
       <ServiceName>LicenseManager</ServiceName>
     </AppInfo>
+    <AppInfo>
+      <AppId>
+        <Path>C:\users\azureuser\appdata\local\squirreltemp\update.exe</Path>
+        <Sid i:nil="true" />
+      </AppId>
+      <CompanyName>Microsoft Corporation</CompanyName>
+      <FileDescription>Microsoft Teams</FileDescription>
+      <FileVersion>1.10.68.0</FileVersion>
+      <ProductName>Microsoft Teams Update</ProductName>
+      <ProductVersion>1.10.68.0</ProductVersion>
+      <SysCreated>2021-08-18T00:08:46Z</SysCreated>
+      <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+    </AppInfo>
+    <AppInfo>
+      <AppId>
+        <Path>C:\users\azureuser\appdata\local\microsoft\teams\current\squirrel.exe</Path>
+        <Sid i:nil="true" />
+      </AppId>
+      <CompanyName>Microsoft Corporation</CompanyName>
+      <FileDescription>Microsoft Teams</FileDescription>
+      <FileVersion>1.10.68.0</FileVersion>
+      <ProductName>Microsoft Teams</ProductName>
+      <ProductVersion>1.10.68.0</ProductVersion>
+      <SysCreated>2022-02-02T13:04:08.6557902Z</SysCreated>
+      <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+    </AppInfo>
+    <AppInfo>
+      <AppId>
+        <Path>C:\program files\common files\microsoft shared\clicktorun\officeclicktorun.exe</Path>
+        <Sid i:nil="true" />
+      </AppId>
+      <CompanyName>Microsoft Corporation</CompanyName>
+      <FileDescription>Microsoft Office Click-to-Run (SxS)</FileDescription>
+      <FileVersion>16.0.14527.20144</FileVersion>
+      <ProductName>Microsoft Office</ProductName>
+      <ProductVersion>16.0.14527.20144</ProductVersion>
+      <SysCreated>2021-12-14T20:42:00.5980927Z</SysCreated>
+      <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
+    </AppInfo>
   </AppInfos>
   <DefaultFwActionIn>Allow</DefaultFwActionIn>
   <DefaultFwActionOut>Allow</DefaultFwActionOut>
@@ -1094,7 +1133,7 @@
       <InterfaceName>Microsoft Hyper-V Network Adapter</InterfaceName>
       <IsActive>true</IsActive>
       <IsApproved>false</IsApproved>
-      <MacAddress>00-0d-3a-80-ff-a7</MacAddress>
+      <MacAddress>00-0d-3a-3a-13-73</MacAddress>
       <RouterIPAddress>10.0.0.1</RouterIPAddress>
       <RouterMacAddress>12-34-56-78-9a-bc</RouterMacAddress>
       <SystemId>{BFB9C014-2FA4-4DB8-A206-EC513BD8E30F}</SystemId>
@@ -1165,18 +1204,39 @@
     </rule>
     <rule i:type="limitRule">
       <Id>70225918-31b4-4cf0-8ba2-cdadcd34d84b</Id>
-      <Revision>17</Revision>
+      <Revision>20</Revision>
       <Conditions />
       <CreatedTime>2022-01-05T03:35:19.0927282Z</CreatedTime>
       <Dir>In</Dir>
       <FilterId>9a02a76b-47ab-4f0d-bd8d-458f3cb94389</FilterId>
       <InternalId>4</InternalId>
-      <IsActive>true</IsActive>
-      <IsEnabled>true</IsEnabled>
-      <UpdatedTime>2022-01-05T12:33:09.6032355Z</UpdatedTime>
+      <IsActive>false</IsActive>
+      <IsEnabled>false</IsEnabled>
+      <UpdatedTime>2022-02-02T13:06:46.2672906Z</UpdatedTime>
       <Weight>0</Weight>
       <Dir>In</Dir>
-      <limitSize>4718592</limitSize>
+      <limitSize>4299161</limitSize>
+    </rule>
+    <rule i:type="QuotaRule">
+      <Id>d6070cfe-e507-4526-9ba9-f8dcdddd8431</Id>
+      <Revision>3</Revision>
+      <Conditions />
+      <CreatedTime>2022-02-02T13:05:32.6012933Z</CreatedTime>
+      <Dir>In</Dir>
+      <FilterId>9a02a76b-47ab-4f0d-bd8d-458f3cb94389</FilterId>
+      <InternalId>5</InternalId>
+      <IsActive>true</IsActive>
+      <IsEnabled>true</IsEnabled>
+      <UpdatedTime>2022-02-02T13:06:12.5296893Z</UpdatedTime>
+      <Weight>0</Weight>
+      <Dir>In</Dir>
+      <EmeailRcps i:nil="true" />
+      <IsAnswered>false</IsAnswered>
+      <IsOverflow>false</IsOverflow>
+      <Quota>3221225472</Quota>
+      <RunActions>true</RunActions>
+      <SendEmail>false</SendEmail>
+      <ShowAlertWindow>false</ShowAlertWindow>
     </rule>
   </Rules>
   <RunClientOnFwRequest>true</RunClientOnFwRequest>
