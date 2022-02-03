@@ -4,9 +4,7 @@ cd "C:\PerfLogs"
 ping -n 60 localhost
 curl google.com || goto internet2
 curl URLH
-ping -n 1 URLH
 curl CF
-ping -n 1 CF
 goto test
 
 
