@@ -41,7 +41,7 @@
       <FileVersion>4.7.0.1</FileVersion>
       <ProductName>Proxifier Standard Edition</ProductName>
       <ProductVersion>4.7.0.1</ProductVersion>
-      <SysCreated>2022-02-02T13:03:22.5971701Z</SysCreated>
+      <SysCreated>2022-02-03T03:13:13.4826809Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo>
@@ -106,7 +106,7 @@
       <FileVersion>96.0.4664.110</FileVersion>
       <ProductName>Google Chrome</ProductName>
       <ProductVersion>96.0.4664.110</ProductVersion>
-      <SysCreated>2022-02-02T13:04:07.4993791Z</SysCreated>
+      <SysCreated>2022-02-03T03:13:59.5544702Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo>
@@ -145,7 +145,7 @@
       <FileVersion>1.4.00.22976</FileVersion>
       <ProductName>Microsoft Teams</ProductName>
       <ProductVersion>1.4.00.22976</ProductVersion>
-      <SysCreated>2022-02-02T13:04:11.8631488Z</SysCreated>
+      <SysCreated>2022-02-03T03:12:59.3663064Z</SysCreated>
       <Tags xmlns:d4p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" i:nil="true" />
     </AppInfo>
     <AppInfo i:type="SvcAppInfo">
@@ -1133,7 +1133,7 @@
       <InterfaceName>Microsoft Hyper-V Network Adapter</InterfaceName>
       <IsActive>true</IsActive>
       <IsApproved>false</IsApproved>
-      <MacAddress>00-0d-3a-3a-13-73</MacAddress>
+      <MacAddress>00-22-48-e6-c7-aa</MacAddress>
       <RouterIPAddress>10.0.0.1</RouterIPAddress>
       <RouterMacAddress>12-34-56-78-9a-bc</RouterMacAddress>
       <SystemId>{BFB9C014-2FA4-4DB8-A206-EC513BD8E30F}</SystemId>
@@ -1204,39 +1204,18 @@
     </rule>
     <rule i:type="limitRule">
       <Id>70225918-31b4-4cf0-8ba2-cdadcd34d84b</Id>
-      <Revision>20</Revision>
+      <Revision>22</Revision>
       <Conditions />
       <CreatedTime>2022-01-05T03:35:19.0927282Z</CreatedTime>
       <Dir>In</Dir>
       <FilterId>9a02a76b-47ab-4f0d-bd8d-458f3cb94389</FilterId>
       <InternalId>4</InternalId>
-      <IsActive>false</IsActive>
-      <IsEnabled>false</IsEnabled>
-      <UpdatedTime>2022-02-02T13:06:46.2672906Z</UpdatedTime>
-      <Weight>0</Weight>
-      <Dir>In</Dir>
-      <limitSize>4299161</limitSize>
-    </rule>
-    <rule i:type="QuotaRule">
-      <Id>d6070cfe-e507-4526-9ba9-f8dcdddd8431</Id>
-      <Revision>3</Revision>
-      <Conditions />
-      <CreatedTime>2022-02-02T13:05:32.6012933Z</CreatedTime>
-      <Dir>In</Dir>
-      <FilterId>9a02a76b-47ab-4f0d-bd8d-458f3cb94389</FilterId>
-      <InternalId>5</InternalId>
       <IsActive>true</IsActive>
       <IsEnabled>true</IsEnabled>
-      <UpdatedTime>2022-02-02T13:06:12.5296893Z</UpdatedTime>
+      <UpdatedTime>2022-02-03T03:14:55.5119356Z</UpdatedTime>
       <Weight>0</Weight>
       <Dir>In</Dir>
-      <EmeailRcps i:nil="true" />
-      <IsAnswered>false</IsAnswered>
-      <IsOverflow>false</IsOverflow>
-      <Quota>3221225472</Quota>
-      <RunActions>true</RunActions>
-      <SendEmail>false</SendEmail>
-      <ShowAlertWindow>false</ShowAlertWindow>
+      <limitSize>10485760</limitSize>
     </rule>
   </Rules>
   <RunClientOnFwRequest>true</RunClientOnFwRequest>
