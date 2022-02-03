@@ -15,9 +15,9 @@
 		<HttpProxiesSupport enabled="false" />
 	</Options>
 	<ProxyList>
-		<Proxy id="100" type="SOCKS5">
+		<Proxy id="100" type="HTTPS">
 			<Options>48</Options>
-			<Port>8080</Port>
+			<Port>8081</Port>
 			<Address>127.0.0.1</Address>
 		</Proxy>
 	</ProxyList>
