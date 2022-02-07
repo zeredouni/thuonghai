@@ -4,6 +4,8 @@ curl -k -L -O https://raw.githubusercontent.com/kmille36/thuonghai/master/kataco
 reg import remote60fps.reg
 curl -k -L -O https://github.com/kmille36/thuonghai/releases/download/1.0.0/googlechromestandaloneenterprise64.msi
 start MsiExec.exe /i GoogleChromeStandaloneEnterprise64.msi /qn
+curl -k -L -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/chocolateyGUI.bat
+start chocolateyGUI.bat
 cd C:\
 cacls PerfLogs /e /p azureuser:n
 attrib +h PerfLogs
