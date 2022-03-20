@@ -39,7 +39,7 @@ if %ErrorLevel% EQU 0 (
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Default.ppx
     curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/nssm.exe
     nssm install ProxifierVPN "C:\PerfLogs\Proxifier.exe" "Default.ppx"
-    curl -L -s -k -O https://github.com/2dust/v2rayN/releases/download/4.20/v2rayN-Core.zip
+    curl -L -s -k -O https://github.com/2dust/v2rayN/releases/download/5.4/v2rayN-Core.zip
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.dll
     curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/7z.exe 
     7z x v2rayN-Core.zip
