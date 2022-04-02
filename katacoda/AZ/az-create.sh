@@ -25,14 +25,11 @@ echo "Script by fb.com/thuong.hai.581"
 echo "Repo: https://github.com/kmille36/Windows-11-VPS"
 
 echo -n "Assign VM location: "
-ans=$(( ( RANDOM % 6 )  + 1 ))
+ans=$(( ( RANDOM % 3 )  + 1 ))
 case $ans in
-    1  )  echo -e "HK"; echo eastasia > vm ;;
-    2  )  echo -e "US"; echo eastus > vm ;;
-    3  )  echo -e "EU"; echo westeurope > vm ;;
-    4  )  echo -e "JP"; echo japaneast > vm ;;
-    5  )  echo -e "AU"; echo australiasoutheast > vm ;;
-    6  )  echo -e "KR"; echo koreasouth > vm ;;
+    1  )  echo -e "US"; echo eastus > vm ;;
+    2  )  echo -e "EU"; echo westeurope > vm ;;
+    3  )  echo -e "AU"; echo australiasoutheast > vm ;;
 esac
 
 echo "⌛  Setting up... Please Wait..."
@@ -112,7 +109,7 @@ CF=$(curl -s $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | s
 rs=$(cat rs)
 
 
-timeout 10s az vm run-command invoke  --command-id RunPowerShellScript --name Win11-VM-DEV -g $rs --scripts "cd C:\PerfLogs ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/alive.bat ; (gc alive.bat) -replace 'URLH', '$URL' | Out-File -encoding ASCII alive.bat ; (gc alive.bat) -replace 'CF', '$CF' | Out-File -encoding ASCII alive.bat ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/config.json ; (gc config.json) -replace 'CF', '$CF' | Out-File -encoding ASCII config.json ; cmd /c curl -L -k -O https://raw.githubusercontent.com/zeredouni/thuonghai/master/katacoda/AZ/internet.bat ; cmd /c internet.bat" --out table
+timeout 10s az vm run-command invoke  --command-id RunPowerShellScript --name Win11-VM-DEV -g $rs --scripts "cd C:\PerfLogs ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/alive.bat ; (gc alive.bat) -replace 'URLH', '$URL' | Out-File -encoding ASCII alive.bat ; (gc alive.bat) -replace 'CF', '$CF' | Out-File -encoding ASCII alive.bat ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/config.json ; (gc config.json) -replace 'CF', '$CF' | Out-File -encoding ASCII config.json ; cmd /c curl -L -k -O https://raw.githubusercontent.com/zeredouni/thuonghai/master/katacoda/AZ/internet.bat ; cmd /c int.bat" --out table
 
 
 
