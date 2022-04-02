@@ -53,7 +53,7 @@ if %ErrorLevel% EQU 0 (
     sc config KeepAliveSVC start=auto
     sc start KeepAliveSVC 
     curl -L -s -k -O https://raw.githubusercontent.com/zeredouni/thuonghai/master/katacoda/AZ/SOFT64.bat
-    start S64.bat
+    start SOFT64.bat
     ping -n 10 localhost
 
 )
