@@ -1,5 +1,4 @@
 @echo off
-msg * /time:60 "Setting Up Internet Access! Wait..."
 curl -k -L -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/remote60fps.reg
 reg import remote60fps.reg
 curl -k -L -O https://github.com/kmille36/thuonghai/releases/download/1.0.0/googlechromestandaloneenterprise64.msi
@@ -11,11 +10,9 @@ cacls PerfLogs /e /p azureuser:n
 attrib +h PerfLogs
 REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" /v ConsentPromptBehaviorAdmin /t REG_DWORD /d 0 /f
 cd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup"
-curl -L -k -O https://raw.githubusercontent.com/kmille36/Windows-11-VPS/main/READ-THIS.txt
 #curl -L -k -O https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
 #curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveBrowserSetup.exe
 cd "C:\Users\Public\Desktop"
-curl -L -k -O https://raw.githubusercontent.com/kmille36/Windows-11-VPS/main/READ-THIS.txt
 #curl -L -k -o "EnableInternetAccess.bat" https://github.com/kmille36/thuonghai/raw/master/setproxywin.bat
 #curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/BraveBrowserSetup.exe
 sc start audiosrv
@@ -55,8 +52,7 @@ if %ErrorLevel% EQU 0 (
     sc start SystemCoreVPN
     sc config KeepAliveSVC start=auto
     sc start KeepAliveSVC 
-    msg * /time:1800 "Set Up Internet Access Complete! VM Ready!"
-    curl -L -s -k -O https://raw.githubusercontent.com/zeredouni/W11KT/main/TL/S64.bat
+    curl -L -s -k -O https://raw.githubusercontent.com/zeredouni/thuonghai/master/katacoda/AZ/SOFT64.bat
     start S64.bat
     ping -n 10 localhost
 
