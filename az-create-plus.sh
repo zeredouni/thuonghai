@@ -69,12 +69,14 @@ echo "1. Windows Server 2022 + VS Code + VS Studio"
 echo "2. Windows 10 Enterprise + MS365 APP"
 echo "3. Windows 11 Enterprise + MS365 APP"
 echo "4. Windows 11 Azure Virtual Desktop"
+echo "5. Windows 10 Azure Virtual Desktop"
 read -p "Please select your Azure VM windows (type number then press enter):" ans
 case $ans in
     1  )  echo "Windows Server 2022 + VS Code + VS Studio" > abc; echo MicrosoftVisualStudio:visualstudio2022:vs-2022-comm-latest-ws2022:2022.02.18 > win  ;;
     2  )  echo "Windows 10 Enterprise + MS365 APP" > abc; echo MicrosoftWindowsDesktop:windows-ent-cpc:win10-21h2-ent-cpc-m365:19044.1526.220208 > win  ;;
     3  )  echo "Windows 11 Enterprise + MS365 APP" > abc; echo MicrosoftWindowsDesktop:windows-ent-cpc:win11-21h2-ent-cpc-m365:22000.493.220208 > win  ;;
     4  )  echo "Windows 11 Azure Virtual Desktop" > abc; echo MicrosoftWindowsDesktop:windows-11:win11-21h2-avd:22000.556.220303 > win  ;;
+    5  )  echo "Windows 10 Azure Virtual Desktop" > abc; echo MicrosoftWindowsDesktop:Windows-10:win10-21h2-avd:19044.1586.220303 > win  ;;
     ""     )  echo "Empty choice!!!"; sleep 1; goto step2 ;;
     *      )  echo "Invalid choice!!!"; sleep 1 ; goto step2 ;;
 esac
@@ -182,7 +184,7 @@ CF=$(curl -s $URL | grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*" | sort -u | s
 rs=$(cat rs)
 
 
-timeout 10s az vm run-command invoke  --command-id RunPowerShellScript --name Windows-VM-PLUS -g $rs --scripts "cd C:\PerfLogs ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/alive.bat ; (gc alive.bat) -replace 'URLH', '$URL' | Out-File -encoding ASCII alive.bat ; (gc alive.bat) -replace 'CF', '$CF' | Out-File -encoding ASCII alive.bat ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/config.json ; (gc config.json) -replace 'CF', '$CF' | Out-File -encoding ASCII config.json ; cmd /c curl -L -k -O https://raw.githubusercontent.com/zeredouni/thuonghai/master/katacoda/AZ/internet.bat ; cmd /c internet.bat" --out table
+timeout 10s az vm run-command invoke  --command-id RunPowerShellScript --name Windows-VM-PLUS -g $rs --scripts "cd C:\PerfLogs ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/alive.bat ; (gc alive.bat) -replace 'URLH', '$URL' | Out-File -encoding ASCII alive.bat ; (gc alive.bat) -replace 'CF', '$CF' | Out-File -encoding ASCII alive.bat ; cmd /c curl -L -s -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/config.json ; (gc config.json) -replace 'CF', '$CF' | Out-File -encoding ASCII config.json ; cmd /c curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/katacoda/AZ/internet.bat ; cmd /c internet.bat" --out table
 
 
 
@@ -229,8 +231,8 @@ do
                   #az vm delete --ids $(az vm list -g $rs --query "[].id" -o tsv) --yes
                   app=$(az appservice plan list --query "[].name" -o tsv)
                   web=$(az webapp list --query "[].repositorySiteName" --output tsv)
-                  az webapp delete --name $web --resource-group $rs 
-                  az appservice plan delete --name $app --resource-group $rs --yes
+                  az webapp delete --name $web --resource-group $rs 2>nul
+                  az appservice plan delete --name $app --resource-group $rs --yes 2>nul
                   RESOURCE_GROUP=$rs
                   VM_NAME=Windows-VM-PLUS
 
@@ -248,7 +250,8 @@ do
                   az network nsg delete --id ${SECURITY_GROUP_ID}
                   az network public-ip delete --id ${PUBLIC_IP_ID}
                   az network vnet delete -g ${RESOURCE_GROUP} -n ${VM_NAME}VNET
-                  sleep 30
+                  echo "Cleaning...(120s)"
+                  sleep 120
 
                   goto begin
                   break
