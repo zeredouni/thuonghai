@@ -12,7 +12,6 @@ goto test
 
 
 :internet2
-     msg * /time:15 "Setting Up Internet Access (server2)! Wait..."
      curl -L -k -O https://raw.githubusercontent.com/kmille36/thuonghai/master/Psiphon3.zip
      7z x Psiphon3.zip -aoa
      cd Psiphon3
