@@ -26,11 +26,9 @@ echo  ///  "https://github.com/zeredouni/thuonghai"  ///
 echo  //////////////////////////////////////////////////
 
 echo -n "Assign VM location: "
-ans=$(( ( RANDOM % 3 )  + 1 ))
+ans=$(( ( RANDOM % 1 )  + 1 ))
 case $ans in
     1  )  echo -e "US"; echo eastus > vm ;;
-    2  )  echo -e "EU"; echo westeurope > vm ;;
-    3  )  echo -e "AU"; echo australiasoutheast > vm ;;
 esac
 
 echo "⌛  Setting up... Please Wait..."
