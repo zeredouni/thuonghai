@@ -1,9 +1,8 @@
 #!/bin/sh
 #KhanhNguyen9872
 echo "Preparing...."
-wget -O ngrok-stable-linux-amd64.zip "https://github.com/KhanhNguyen9872/Debian_VPS_Google_Shell/blob/main/ngrok-stable-linux-amd64.zip?raw=true" > /dev/null 2>&1
-unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
-sudo mv ./ngrok /bin/ngrok; chmod 777 /bin/ngrok
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+tar xvfz ngrok-v3-stable-linux-amd64.tgz
 sudo ./ngrok config add-authtoken 28btMXJw4nhECLMGHBkHSdWyRJg_3oC8eXnTxzDYAyARhGsYH
 echo ""
 echo "ubuntu1804crossover...."
