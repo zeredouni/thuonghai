@@ -7,6 +7,8 @@ sudo ./ngrok config add-authtoken 28btMXJw4nhECLMGHBkHSdWyRJg_3oC8eXnTxzDYAyARhG
 echo ""
 echo "ubuntu1804crossover...."
 sudo docker run --name ubuntu18.04 --privileged --shm-size 1g -d -p 5900:5900 -p 8080:6080 thuonghai2711/ubuntu-vnc
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt update -y > /dev/null 2>&1
 sudo apt install apt-transport-https ufw fish apache2 php sublime-text xfce4 xarchiver wine firefox-esr mesa-utils git xfce4-goodies pv nmap nano apt-utils dialog terminator autocutsel dbus-x11 dbus neofetch perl p7zip unzip zip curl tar git python3 python3-pip net-tools openssl tigervnc-standalone-server tigervnc-xorg-extension -y
 export HOME="$(pwd)"
